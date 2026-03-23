@@ -212,13 +212,15 @@
 
     /* ── CONTENT ── */
     .content {
+      max-width: 1000px;
+      margin: 0 auto;
       padding: 32px 48px 80px;
     }
 
     /* ── COLUMN HEADERS ── */
     .col-headers {
       display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1.4fr 1.6fr 1fr;
       gap: 16px;
       padding: 0 0 10px;
       border-bottom: 2px solid var(--ink);
@@ -236,7 +238,7 @@
     /* ── MEETING ROW ── */
     .meeting-row {
       display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1.4fr 1.6fr 1fr;
       gap: 16px;
       align-items: center;
       padding: 16px 8px;
@@ -251,14 +253,14 @@
 
     .meeting-date {
       font-family: 'Fraunces', serif;
-      font-size: 32px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 8px;
+      margin-bottom: 3px;
     }
 
     .meeting-type {
-      font-size: 18px;
+      font-size: 12px;
       color: var(--muted);
     }
 
@@ -303,17 +305,17 @@
     .meeting-row:hover .thumb-play-btn { transform: scale(1.1); background: var(--accent); }
     .meeting-row.playing .thumb-play-btn { background: var(--ink); }
 
-    .meeting-docs { display: flex; flex-direction: column; gap: 5px; align-items: center; justify-content: center; height: 100%; }
+    .meeting-docs { display: flex; flex-direction: column; gap: 5px; }
 
     .doc-pill {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-size: 16px;
+      font-size: 11px;
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
-      padding: 8px 14px;
+      padding: 4px 8px;
       border-radius: 3px;
       border: 1px solid rgba(184,134,11,0.3);
       background: rgba(184,134,11,0.06);
@@ -323,7 +325,7 @@
     .doc-pill:hover { background: rgba(184,134,11,0.14); border-color: var(--accent); }
 
     .doc-none {
-      font-size: 16px;
+      font-size: 11px;
       color: var(--rule);
       font-style: italic;
     }
@@ -411,17 +413,18 @@
   <script>
     // ── DATA ──
     const meetings = [
-      { year: 2026, month: 3, date: 'March 16, 2026', type: 'Regular Business Meeting',  vid: '2KxazWgFRsI', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876' },
-      { year: 2026, month: 3, date: 'March 16, 2026', type: 'Committee of the Whole',     vid: '0ddn1llgC9k', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877' },
-      { year: 2026, month: 3, date: 'March 2, 2026',  type: 'Regular Business Meeting',  vid: 'pp5pCqjcJLE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4806', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4823' },
-      { year: 2026, month: 3, date: 'March 2, 2026',  type: 'Committee of the Whole',     vid: '_HzfrsdW5C0', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4819', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4825' },
-      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Regular Business Meeting', vid: 'rw9AiPNa12A', agenda: null, minutes: null },
-      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Committee of the Whole',   vid: 'F6OL4Dl1CvU', agenda: null, minutes: null },
-      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Regular Business Meeting', vid: '8XYsqV-bIlc', agenda: null, minutes: null },
-      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Committee of the Whole',   vid: 'tq1MxNj6osA', agenda: null, minutes: null },
-      { year: 2026, month: 1, date: 'January 26, 2026',  type: 'City Commission Meeting',  vid: 'eSdMoRZE6y4', agenda: null, minutes: null },
-      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Regular Business Meeting', vid: 'upL1eEYIMCE', agenda: null, minutes: null },
-      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',   vid: 'SwI5GDHpHNk', agenda: null, minutes: null },
+      { year: 2026, month: 3, date: 'March 16, 2026', type: 'Regular Business Meeting',              vid: '2KxazWgFRsI', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876' },
+      { year: 2026, month: 3, date: 'March 16, 2026', type: 'Committee of the Whole',                vid: '0ddn1llgC9k', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877' },
+      { year: 2026, month: 3, date: 'March 14, 2026', type: 'Annual Retreat',                        vid: 'IkkKEVJrGj4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2580/files/agenda/4835', minutes: null },
+      { year: 2026, month: 3, date: 'March 2, 2026',  type: 'Regular Business Meeting',              vid: 'pp5pCqjcJLE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4806', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4823' },
+      { year: 2026, month: 3, date: 'March 2, 2026',  type: 'Committee of the Whole',                vid: '_HzfrsdW5C0', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4819', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4825' },
+      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Regular Business Meeting',           vid: 'rw9AiPNa12A', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4751', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4771' },
+      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Committee of the Whole',             vid: 'F6OL4Dl1CvU', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4753', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4772' },
+      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Regular Business Meeting',           vid: '8XYsqV-bIlc', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4684', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4692' },
+      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Committee of the Whole',             vid: 'tq1MxNj6osA', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4682', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4722' },
+      { year: 2026, month: 1, date: 'January 26, 2026',  type: 'City Commission Meeting',            vid: 'eSdMoRZE6y4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4669', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4689' },
+      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Regular Business Meeting',           vid: 'upL1eEYIMCE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727' },
+      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',             vid: 'SwI5GDHpHNk', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620' },
     ];
 
     let activeRow = null;
