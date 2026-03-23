@@ -280,34 +280,150 @@
 
     // ── MUNICIPALITY DEFINITIONS ──
     const MUNIS = {
-      'city-commission': {
-        name:  'Kalamazoo City Commission',
-        short: 'City Commission',
-        color: '#b8860b'
-      },
-      'portage': {
-        name:  'Portage City Council',
-        short: 'Portage Council',
-        color: '#3b5e3a'
-      },
+      'county-commission':   { name: 'Kalamazoo County Commission',  short: 'County Commission',   color: '#c0522a' },
+      'city-commission':     { name: 'Kalamazoo City Commission',     short: 'City Commission',      color: '#b8860b' },
+      'portage':             { name: 'Portage City Council',          short: 'Portage Council',      color: '#3b5e3a' },
+      'kalamazoo-township':  { name: 'Kalamazoo Charter Township',    short: 'Kal. Township',        color: '#8b4e2a' },
+      'parchment':           { name: 'Parchment City Commission',     short: 'Parchment',            color: '#2d5c58' },
+      'comstock':            { name: 'Comstock Charter Township',     short: 'Comstock Twp.',        color: '#5c4a2a' },
+      'oshtemo':             { name: 'Oshtemo Charter Township',      short: 'Oshtemo Twp.',         color: '#7a5c2a' },
+      'texas-township':      { name: 'Texas Charter Township',        short: 'Texas Twp.',           color: '#8b3a2a' },
+      'galesburg':           { name: 'Galesburg City Council',        short: 'Galesburg',            color: '#4a7a52' },
+      'vicksburg':           { name: 'Vicksburg Village Council',     short: 'Vicksburg',            color: '#9c4a1e' },
+      'richland-village':    { name: 'Village of Richland',           short: 'Richland Village',     color: '#556b2f' },
+      'schoolcraft-village': { name: 'Village of Schoolcraft',        short: 'Schoolcraft Vill.',    color: '#7a3b2e' },
     };
 
     // ── EVENT DATA ──
     const EVENTS = [
 
+      // ── Kalamazoo County Commission ──
+      // CoW 4pm + Regular Board Meeting 6:30pm on each date
+      // January
+      { date: '2026-01-06', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-01-06', muni: 'county-commission', type: 'Organizational Meeting',  time: '6:30pm' },
+      { date: '2026-01-20', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-01-20', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // February
+      { date: '2026-02-03', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-02-03', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-02-17', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-02-17', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // March
+      { date: '2026-03-03', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-03-03', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-03-17', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-03-17', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // April
+      { date: '2026-04-07', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-04-07', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-04-21', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-04-21', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // May (May 6 shifted to Wednesday)
+      { date: '2026-05-06', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-05-06', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-05-19', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-05-19', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // June
+      { date: '2026-06-02', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-06-02', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-06-16', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-06-16', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // July
+      { date: '2026-07-07', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-07-07', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-07-21', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-07-21', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // August (Aug 5 shifted to Wednesday)
+      { date: '2026-08-05', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-08-05', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-08-18', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-08-18', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // September
+      { date: '2026-09-01', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-09-01', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-09-15', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-09-15', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // October
+      { date: '2026-10-06', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-10-06', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-10-20', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-10-20', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // November (Nov 4 shifted to Wednesday)
+      { date: '2026-11-04', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-11-04', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-11-17', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-11-17', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      // December
+      { date: '2026-12-01', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-12-01', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+      { date: '2026-12-15', muni: 'county-commission', type: 'Committee of the Whole',  time: '4pm'    },
+      { date: '2026-12-15', muni: 'county-commission', type: 'Regular Board Meeting',   time: '6:30pm' },
+
       // ── Kalamazoo City Commission ──
+      // CoW 5pm + Regular Business Meeting 7pm on each standard date
+      // January
+      { date: '2026-01-05', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
       { date: '2026-01-05', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
-      { date: '2026-01-05', muni: 'city-commission', type: 'Committee of the Whole',   time: '7pm' },
-      { date: '2026-01-26', muni: 'city-commission', type: 'Special Meeting',           time: '7pm' },
+      { date: '2026-01-26', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-01-26', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // February
+      { date: '2026-02-02', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
       { date: '2026-02-02', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
-      { date: '2026-02-02', muni: 'city-commission', type: 'Committee of the Whole',   time: '7pm' },
+      { date: '2026-02-16', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
       { date: '2026-02-16', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
-      { date: '2026-02-16', muni: 'city-commission', type: 'Committee of the Whole',   time: '7pm' },
+      // March
+      { date: '2026-03-02', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
       { date: '2026-03-02', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
-      { date: '2026-03-02', muni: 'city-commission', type: 'Committee of the Whole',   time: '7pm' },
-      { date: '2026-03-14', muni: 'city-commission', type: 'Annual Retreat',            time: null  },
+      { date: '2026-03-14', muni: 'city-commission', type: 'Annual Planning Retreat',  time: '8:30am' },
+      { date: '2026-03-16', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
       { date: '2026-03-16', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
-      { date: '2026-03-16', muni: 'city-commission', type: 'Committee of the Whole',   time: '7pm' },
+      // April
+      { date: '2026-04-06', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-04-06', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-04-20', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-04-20', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // May
+      { date: '2026-05-11', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-05-11', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-05-18', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-05-18', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // June
+      { date: '2026-06-01', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-06-01', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-06-15', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-06-15', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // July
+      { date: '2026-07-06', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-07-06', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-07-20', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-07-20', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // August
+      { date: '2026-08-10', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-08-10', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-08-17', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-08-17', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // September (Sep 8 shifted to Tuesday)
+      { date: '2026-09-08', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-09-08', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-09-21', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-09-21', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // October
+      { date: '2026-10-05', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-10-05', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-10-19', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-10-19', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // November
+      { date: '2026-11-09', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-11-09', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-11-16', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-11-16', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      // December
+      { date: '2026-12-07', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-12-07', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
+      { date: '2026-12-14', muni: 'city-commission', type: 'Budget Review Work Session', time: '7pm' },
+      { date: '2026-12-21', muni: 'city-commission', type: 'Committee of the Whole',   time: '5pm' },
+      { date: '2026-12-21', muni: 'city-commission', type: 'Regular Business Meeting', time: '7pm' },
 
       // ── Portage City Council ──
       { date: '2026-01-20', muni: 'portage', type: 'Special Meeting',               time: '4pm'    },
@@ -330,6 +446,244 @@
       { date: '2026-08-11', muni: 'portage', type: 'Regular Meeting',               time: '6pm'    },
       { date: '2026-08-25', muni: 'portage', type: 'Regular Meeting',               time: '6pm'    },
       { date: '2026-09-08', muni: 'portage', type: 'Regular Meeting',               time: '6pm'    },
+
+      // ── Kalamazoo Charter Township ──
+      // Work Session 6pm + Regular Board Meeting 7pm on standard dates
+      // January (Jan 12 canceled; Jan 23 special)
+      { date: '2026-01-23', muni: 'kalamazoo-township', type: 'Special Meeting',      time: '9:30am' },
+      { date: '2026-01-26', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-01-26', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // February (Feb 24 canceled; Feb 20 special)
+      { date: '2026-02-09', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-02-09', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-02-20', muni: 'kalamazoo-township', type: 'Special Meeting',      time: '9:30am' },
+      // March
+      { date: '2026-03-09', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-03-09', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-03-16', muni: 'kalamazoo-township', type: 'Special Meeting',      time: '10am'   },
+      { date: '2026-03-23', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-03-23', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // April
+      { date: '2026-04-13', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-04-13', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-04-27', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-04-27', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // May (May 26 shifted to Tuesday)
+      { date: '2026-05-11', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-05-11', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-05-26', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-05-26', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // June
+      { date: '2026-06-08', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-06-08', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-06-22', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-06-22', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // July
+      { date: '2026-07-13', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-07-13', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      { date: '2026-07-27', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-07-27', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+      // August (published through Aug only)
+      { date: '2026-08-10', muni: 'kalamazoo-township', type: 'Work Session',          time: '6pm'    },
+      { date: '2026-08-10', muni: 'kalamazoo-township', type: 'Regular Board Meeting', time: '7pm'    },
+
+      // ── Parchment City Commission ──
+      // Single session 7pm; holiday shifts noted
+      { date: '2026-01-05', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-01-20', muni: 'parchment', type: 'Regular Meeting', time: '7pm' }, // shifted from MLK Day
+      { date: '2026-02-02', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-02-17', muni: 'parchment', type: 'Regular Meeting', time: '7pm' }, // shifted from Presidents Day
+      { date: '2026-03-02', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-03-16', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-06', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-20', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-04', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-18', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-01', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-15', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-07-06', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-07-20', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-08-03', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-08-17', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-09-08', muni: 'parchment', type: 'Regular Meeting', time: '7pm' }, // shifted from Labor Day
+      { date: '2026-09-21', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-05', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-19', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-02', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-16', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-07', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-21', muni: 'parchment', type: 'Regular Meeting', time: '7pm' },
+
+      // ── Comstock Charter Township ──
+      // Single session 6pm; Nov/Dec not yet published
+      { date: '2026-01-05', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-02-02', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-02-23', muni: 'comstock', type: 'Regular Meeting', time: '6pm' }, // shifted from Presidents Day
+      { date: '2026-03-02', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-03-16', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-03-24', muni: 'comstock', type: 'Special Meeting',  time: '6pm' }, // at Comstock High School
+      { date: '2026-04-06', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-04-27', muni: 'comstock', type: 'Regular Meeting', time: '6pm' }, // rescheduled from Apr 20
+      { date: '2026-05-18', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-06-01', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-06-15', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-07-06', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-07-20', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-08-17', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-09-21', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-10-19', muni: 'comstock', type: 'Regular Meeting', time: '6pm' },
+
+      // ── Oshtemo Charter Township ──
+      // Regular meetings 5:30pm; special sessions time TBD
+      { date: '2026-01-13', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-01-27', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-02-10', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-02-24', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-03-10', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-03-17', muni: 'oshtemo', type: 'Joint Boards Meeting',         time: null     },
+      { date: '2026-03-24', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-04-14', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-04-28', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-05-12', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-05-26', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-06-09', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-06-23', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-06-24', muni: 'oshtemo', type: 'Budget Kickoff Meeting',       time: null     },
+      { date: '2026-07-14', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-07-15', muni: 'oshtemo', type: 'Achievements, Goals & Visions', time: null   },
+      { date: '2026-07-28', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-08-11', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-08-25', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-08-26', muni: 'oshtemo', type: 'Budget Workshop',              time: null     },
+      { date: '2026-09-08', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-09-15', muni: 'oshtemo', type: 'Joint Boards Meeting',         time: null     },
+      { date: '2026-09-22', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-09-23', muni: 'oshtemo', type: 'Budget Meeting',               time: null     },
+      { date: '2026-10-13', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-10-27', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-11-10', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-11-24', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-12-08', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+      { date: '2026-12-22', muni: 'oshtemo', type: 'Regular Meeting',              time: '5:30pm' },
+
+      // ── Texas Charter Township ──
+      // 2nd Monday: Regular Meeting 6pm only
+      // 4th Monday (or shifted): CoW 5pm + Regular Meeting 6pm
+      { date: '2026-01-12', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-01-26', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-01-26', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-02-09', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-02-23', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-02-23', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-03-09', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-03-23', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-03-23', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-04-13', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-04-27', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-04-27', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-05-11', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-05-18', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' }, // shifted for Memorial Day
+      { date: '2026-05-18', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-06-08', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-06-22', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-06-22', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-07-13', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-07-27', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-07-27', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-08-10', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-08-24', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-08-24', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-09-14', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-09-28', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-09-28', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-10-12', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-10-26', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-10-26', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-11-09', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-11-23', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-11-23', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-12-14', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+      { date: '2026-12-28', muni: 'texas-township', type: 'Committee of the Whole', time: '5pm' },
+      { date: '2026-12-28', muni: 'texas-township', type: 'Regular Meeting',        time: '6pm' },
+
+      // ── Galesburg City Council ──
+      // Single session 6pm; 1st Monday each month
+      { date: '2026-01-05', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-02-02', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-03-02', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-04-06', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-05-04', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-06-01', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-07-06', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-08-03', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-09-07', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' }, // falls on Labor Day — likely shifted
+      { date: '2026-10-05', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-11-02', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+      { date: '2026-12-07', muni: 'galesburg', type: 'Regular Meeting', time: '6pm' },
+
+      // ── Vicksburg Village Council ──
+      // 7pm; 1st & 3rd Monday Oct–Jun; 1st Monday only Jul–Sep
+      { date: '2026-01-05', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-01-20', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' }, // shifted from MLK Day (Jan 19)
+      { date: '2026-02-02', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-02-23', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' }, // shifted from Presidents Day (Feb 16)
+      { date: '2026-03-02', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-03-16', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-06', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-20', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-04', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-18', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-01', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-15', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-07-06', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' }, // once per month Jul–Sep
+      { date: '2026-08-03', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-09-08', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' }, // shifted from Labor Day (Sep 7)
+      { date: '2026-10-05', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-19', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-02', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-16', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-07', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-21', muni: 'vicksburg', type: 'Regular Meeting', time: '7pm' },
+
+      // ── Village of Richland ──
+      // 7pm; 2nd Monday each month
+      { date: '2026-01-12', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-02-09', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-03-09', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-13', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-11', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-08', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-07-13', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-08-10', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-09-14', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-12', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-09', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-14', muni: 'richland-village', type: 'Regular Meeting', time: '7pm' },
+
+      // ── Village of Schoolcraft ──
+      // 7pm; 1st & 3rd Monday (single meeting in July and August)
+      { date: '2026-01-05', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-01-19', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-02-02', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-02-16', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-03-02', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-03-16', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-06', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-04-20', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-04', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-05-18', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-01', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-06-15', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-07-06', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' }, // single meeting in July
+      { date: '2026-08-03', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' }, // single meeting in August
+      { date: '2026-09-08', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' }, // shifted from Labor Day
+      { date: '2026-09-21', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-05', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-10-19', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-02', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-11-16', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-07', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
+      { date: '2026-12-21', muni: 'schoolcraft-village', type: 'Regular Meeting', time: '7pm' },
 
     ];
 
