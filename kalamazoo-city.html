@@ -212,15 +212,13 @@
 
     /* ── CONTENT ── */
     .content {
-      max-width: 1000px;
-      margin: 0 auto;
       padding: 32px 48px 80px;
     }
 
     /* ── COLUMN HEADERS ── */
     .col-headers {
       display: grid;
-      grid-template-columns: 1.4fr 1.6fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
       gap: 16px;
       padding: 0 0 10px;
       border-bottom: 2px solid var(--ink);
@@ -238,7 +236,7 @@
     /* ── MEETING ROW ── */
     .meeting-row {
       display: grid;
-      grid-template-columns: 1.4fr 1.6fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
       gap: 16px;
       align-items: center;
       padding: 16px 8px;
@@ -253,14 +251,14 @@
 
     .meeting-date {
       font-family: 'Fraunces', serif;
-      font-size: 16px;
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 3px;
+      margin-bottom: 8px;
     }
 
     .meeting-type {
-      font-size: 12px;
+      font-size: 18px;
       color: var(--muted);
     }
 
@@ -305,17 +303,17 @@
     .meeting-row:hover .thumb-play-btn { transform: scale(1.1); background: var(--accent); }
     .meeting-row.playing .thumb-play-btn { background: var(--ink); }
 
-    .meeting-docs { display: flex; flex-direction: column; gap: 5px; }
+    .meeting-docs { display: flex; flex-direction: column; gap: 5px; align-items: center; justify-content: center; height: 100%; }
 
     .doc-pill {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-size: 11px;
+      font-size: 16px;
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
-      padding: 4px 8px;
+      padding: 8px 14px;
       border-radius: 3px;
       border: 1px solid rgba(184,134,11,0.3);
       background: rgba(184,134,11,0.06);
@@ -325,7 +323,7 @@
     .doc-pill:hover { background: rgba(184,134,11,0.14); border-color: var(--accent); }
 
     .doc-none {
-      font-size: 11px;
+      font-size: 16px;
       color: var(--rule);
       font-style: italic;
     }
