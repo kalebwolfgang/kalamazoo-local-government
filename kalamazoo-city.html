@@ -547,7 +547,9 @@
       if (activeRow) { document.getElementById(activeRow)?.classList.remove('playing'); activeRow = null; }
     }
 
-    // Init
+    // Init — default to most recent month with data
+    const latestMonth = String(Math.max(...meetings.map(m => m.month)));
+    document.getElementById('month-select').value = latestMonth;
     renderMeetings();
   </script>
 
