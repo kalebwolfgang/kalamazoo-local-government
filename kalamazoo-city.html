@@ -215,9 +215,15 @@
       margin-top: 4px;
     }
 
-    /* Right column: type + pills */
+    /* Right column: type + pills + thumbnail */
     .row-body {
-      padding: 22px 32px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .row-body-text {
+      flex: 1;
+      padding: 22px 28px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -238,6 +244,49 @@
       flex-wrap: wrap;
       gap: 6px;
     }
+
+    /* Thumbnail: flush right, full row height */
+    .meeting-thumb {
+      width: 200px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      background: #2a2a2a;
+      border-left: 1px solid var(--rule);
+    }
+
+    .meeting-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.12s;
+    }
+
+    .meeting-row:hover .meeting-thumb img { opacity: 0.82; }
+
+    .thumb-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumb-play-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(184,134,11,0.88);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #fff;
+      transition: transform 0.12s, background 0.12s;
+    }
+    .meeting-row:hover .thumb-play-btn { transform: scale(1.1); background: var(--accent); }
+    .meeting-row.playing .thumb-play-btn { background: var(--ink); }
 
     .doc-pill {
       display: inline-flex;
@@ -272,8 +321,13 @@
     .main-split.is-playing .meeting-row.playing      { border-left-color: var(--accent); }
 
     .main-split.is-playing .row-day { display: none; }
+    .main-split.is-playing .meeting-thumb { display: none; }
 
     .main-split.is-playing .row-body {
+      display: block;
+    }
+
+    .main-split.is-playing .row-body-text {
       padding: 11px 14px;
       gap: 6px;
     }
@@ -547,12 +601,18 @@
             <div class="row-day-month">${monthStr} ${yearStr}</div>
           </div>
           <div class="row-body">
-            <div class="row-compact-date">${m.date}</div>
-            <div class="meeting-type">${m.type}</div>
-            <div class="meeting-docs">
-              ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
-              ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
-              ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
+            <div class="row-body-text">
+              <div class="row-compact-date">${m.date}</div>
+              <div class="meeting-type">${m.type}</div>
+              <div class="meeting-docs">
+                ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
+                ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
+                ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
+              </div>
+            </div>
+            <div class="meeting-thumb">
+              <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="">
+              <div class="thumb-play"><div class="thumb-play-btn">▶</div></div>
             </div>
           </div>
         </div>`;
