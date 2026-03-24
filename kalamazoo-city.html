@@ -133,28 +133,149 @@
       color: var(--muted);
     }
 
-    /* ── PLAYER PANEL ── */
-    .player-panel {
-      display: none;
-      background: #1a1208;
-      border-bottom: 2px solid var(--accent);
-      flex-shrink: 0;
-      /* height is driven by content — video aspect ratio handled below */
-    }
-
-    .player-panel.active {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      height: clamp(300px, 52vh, 430px);
-    }
-
-    .player-video {
-      position: relative;
-      height: 100%;
+    /* ── MAIN SPLIT ── */
+    .main-split {
+      flex: 1;
+      min-height: 0;
+      display: flex;
       overflow: hidden;
     }
 
-    .player-video iframe {
+    /* ── LIST PANE ── */
+    .list-pane {
+      width: 38%;
+      flex-shrink: 0;
+      overflow-y: auto;
+      border-right: 1px solid var(--rule);
+    }
+
+    .list-heading {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 14px 20px 10px;
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+
+    /* ── MEETING ROW (compact) ── */
+    .meeting-row {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--rule);
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: background 0.12s, border-left-color 0.12s;
+    }
+    .meeting-row:hover   { background: rgba(184,134,11,0.07); border-left-color: rgba(184,134,11,0.4); }
+    .meeting-row.playing { background: rgba(184,134,11,0.13); border-left-color: var(--accent); }
+
+    .meeting-date {
+      font-family: 'Fraunces', serif;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .meeting-type {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* ── DOC PILLS ── */
+    .meeting-docs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .doc-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 3px;
+      border: 1px solid rgba(184,134,11,0.3);
+      background: rgba(184,134,11,0.06);
+      transition: background 0.12s;
+    }
+    .doc-pill:hover { background: rgba(184,134,11,0.14); border-color: var(--accent); }
+
+    .doc-none {
+      font-size: 11px;
+      color: var(--rule);
+      font-style: italic;
+    }
+
+    .no-results {
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* ── DETAIL PANE ── */
+    .detail-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: #1a1208;
+    }
+
+    .detail-placeholder {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: rgba(245,237,228,0.2);
+      user-select: none;
+    }
+
+    .detail-placeholder-icon {
+      font-size: 36px;
+      opacity: 0.5;
+    }
+
+    .detail-placeholder-text {
+      font-family: 'Fraunces', serif;
+      font-size: 17px;
+      font-style: italic;
+      letter-spacing: -0.02em;
+    }
+
+    .detail-content {
+      flex: 1;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .detail-content.active { display: flex; }
+
+    .detail-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      flex-shrink: 0;
+      background: #000;
+    }
+
+    .detail-video iframe {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -162,51 +283,41 @@
       border: none;
     }
 
-    .player-docs {
-      padding: 20px 24px;
+    .detail-info {
+      padding: 20px 28px 24px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      border-left: 1px solid rgba(255,255,255,0.08);
+      gap: 10px;
       overflow-y: auto;
+      flex: 1;
     }
 
-    .player-close {
-      margin-top: auto;
-      align-self: flex-end;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(245,237,228,0.25);
-      border-radius: 6px;
-      color: rgba(245,237,228,0.85);
-      cursor: pointer;
-      font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
-      letter-spacing: 0.06em;
-      padding: 7px 14px;
-      transition: background 0.12s, color 0.12s;
-    }
-    .player-close:hover { background: rgba(255,255,255,0.18); color: var(--light); }
-
-    .player-docs-date {
+    .detail-meta-date {
       font-size: 10px;
       color: rgba(245,237,228,0.4);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
-    .player-docs-title {
+    .detail-title {
       font-family: 'Fraunces', serif;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--light);
       letter-spacing: -0.02em;
       line-height: 1.2;
-      margin-top: -4px;
+    }
+
+    .detail-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
     }
 
     .doc-link {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       padding: 9px 12px;
       border-radius: 6px;
       background: rgba(255,255,255,0.05);
@@ -231,149 +342,30 @@
       flex-shrink: 0;
     }
 
-    /* ── SCROLL AREA ── */
-    .scroll-area {
-      overflow-y: auto;
-      flex: 1;
-      min-height: 0;
-    }
-
-    /* ── SECTION HEADING ── */
-    .section-heading {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      padding: 24px 48px 14px;
-      color: var(--ink);
-    }
-
-    /* ── MEETING ROW (card style) ── */
-    .meeting-row {
-      display: grid;
-      grid-template-columns: 1fr 160px;
-      gap: 8px;
-      align-items: center;
-      padding: 18px 24px 18px 44px;
-      border-bottom: 1px solid var(--rule);
-      border-left: 4px solid var(--accent);
+    .detail-close {
+      margin-top: 4px;
+      align-self: flex-start;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(245,237,228,0.18);
+      border-radius: 6px;
+      color: rgba(245,237,228,0.6);
       cursor: pointer;
-      transition: background 0.12s, border-left-color 0.12s;
-    }
-    .meeting-row:hover   { background: rgba(184,134,11,0.07); }
-    .meeting-row.playing { background: rgba(184,134,11,0.13); border-left-color: var(--ink); }
-
-    .meeting-date {
-      font-family: 'Fraunces', serif;
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 5px;
-    }
-
-    .meeting-type {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    /* ── THUMBNAIL ── */
-    .meeting-thumb {
-      position: relative;
-      width: 160px;
-      aspect-ratio: 16/9;
-      border-radius: 5px;
-      overflow: hidden;
-      background: #2a2a2a;
-      flex-shrink: 0;
-    }
-
-    .meeting-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.12s;
-    }
-
-    .meeting-row:hover .meeting-thumb img { opacity: 0.82; }
-
-    .thumb-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .thumb-play-btn {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(184,134,11,0.88);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      color: #fff;
-      transition: transform 0.12s, background 0.12s;
-    }
-    .meeting-row:hover   .thumb-play-btn { transform: scale(1.1); background: var(--accent); }
-    .meeting-row.playing .thumb-play-btn { background: var(--ink); }
-
-    /* ── DOC PILLS ── */
-    .meeting-docs {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .doc-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
       font-size: 12px;
-      font-weight: 500;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 5px 10px;
-      border-radius: 3px;
-      border: 1px solid rgba(184,134,11,0.3);
-      background: rgba(184,134,11,0.06);
-      transition: background 0.12s;
-      width: fit-content;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.06em;
+      padding: 6px 14px;
+      transition: background 0.12s, color 0.12s;
     }
-    .doc-pill:hover { background: rgba(184,134,11,0.14); border-color: var(--accent); }
-
-    .doc-none {
-      font-size: 12px;
-      color: var(--rule);
-      font-style: italic;
-    }
-
-    .no-results {
-      padding: 40px 0;
-      text-align: center;
-      font-family: 'Fraunces', serif;
-      font-size: 18px;
-      font-style: italic;
-      color: var(--muted);
-    }
+    .detail-close:hover { background: rgba(255,255,255,0.14); color: var(--light); }
 
     /* ── MOBILE ── */
     @media (max-width: 680px) {
       header { padding: 18px 20px; }
       .filter-bar { padding: 10px 20px; }
-      .player-panel.active { grid-template-columns: 1fr; height: auto; }
-      .player-video { padding-bottom: 56.25%; height: 0; position: relative; }
-      .player-video iframe { position: absolute; inset: 0; }
-      .player-docs { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); }
-      .meeting-row { padding: 14px 20px 14px 16px; grid-template-columns: 1fr 90px; gap: 12px; }
-      .meeting-date { font-size: 20px; }
-      .meeting-thumb { width: 90px; }
+      .main-split { flex-direction: column; }
+      .list-pane { width: 100%; flex: none; max-height: 42vh; border-right: none; border-bottom: 1px solid var(--rule); }
+      .detail-pane { flex: 1; }
+      .meeting-date { font-size: 15px; }
     }
   </style>
 </head>
@@ -412,23 +404,34 @@
     <span class="filter-count" id="filter-count"></span>
   </div>
 
-  <!-- PLAYER PANEL -->
-  <div class="player-panel" id="player-panel">
-    <div class="player-video">
-      <iframe id="yt-player" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    </div>
-    <div class="player-docs" id="player-docs">
-      <div class="player-docs-date" id="player-docs-date"></div>
-      <div class="player-docs-title" id="player-docs-title"></div>
-      <div id="player-docs-links"></div>
-      <button class="player-close" onclick="closePlayer()">✕ Close player</button>
-    </div>
-  </div>
+  <!-- MAIN SPLIT -->
+  <div class="main-split">
 
-  <!-- INTERNAL SCROLL AREA -->
-  <div class="scroll-area">
-    <div class="section-heading">Meeting Recordings &amp; Documents</div>
-    <div id="meeting-list"></div>
+    <!-- LEFT: meeting list -->
+    <div class="list-pane">
+      <div class="list-heading">Meeting Recordings &amp; Documents</div>
+      <div id="meeting-list"></div>
+    </div>
+
+    <!-- RIGHT: detail / player -->
+    <div class="detail-pane">
+      <div class="detail-placeholder" id="detail-placeholder">
+        <div class="detail-placeholder-icon">▶</div>
+        <div class="detail-placeholder-text">Select a meeting to watch</div>
+      </div>
+      <div class="detail-content" id="detail-content">
+        <div class="detail-video">
+          <iframe id="yt-player" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div class="detail-info">
+          <div class="detail-meta-date" id="detail-meta-date"></div>
+          <div class="detail-title" id="detail-title"></div>
+          <div class="detail-links" id="detail-links"></div>
+          <button class="detail-close" onclick="closePlayer()">✕ Close player</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script>
@@ -477,18 +480,12 @@
 
       list.innerHTML = filtered.map((m, i) => `
         <div class="meeting-row" id="row-${i}" onclick="playVideo('${m.vid}','${m.date}','${m.type}',${m.agenda ? `'${m.agenda}'` : 'null'},${m.minutes ? `'${m.minutes}'` : 'null'},'row-${i}')">
-          <div>
-            <div class="meeting-date">${m.date}</div>
-            <div class="meeting-type">${m.type}</div>
-            <div class="meeting-docs">
-              ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
-              ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
-              ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
-            </div>
-          </div>
-          <div class="meeting-thumb">
-            <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="">
-            <div class="thumb-play"><div class="thumb-play-btn">▶</div></div>
+          <div class="meeting-date">${m.date}</div>
+          <div class="meeting-type">${m.type}</div>
+          <div class="meeting-docs">
+            ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
+            ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
+            ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
           </div>
         </div>
       `).join('');
@@ -501,21 +498,23 @@
 
       document.getElementById('yt-player').src =
         'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
-      document.getElementById('player-docs-date').textContent = date;
-      document.getElementById('player-docs-title').textContent = type;
+      document.getElementById('detail-meta-date').textContent = date;
+      document.getElementById('detail-title').textContent = type;
 
-      const linksEl = document.getElementById('player-docs-links');
+      const linksEl = document.getElementById('detail-links');
       linksEl.innerHTML = agendaUrl || minutesUrl
         ? (agendaUrl  ? `<a class="doc-link" href="${agendaUrl}"  target="_blank"><div class="doc-icon">📄</div> Agenda</a>`  : '')
         + (minutesUrl ? `<a class="doc-link" href="${minutesUrl}" target="_blank"><div class="doc-icon">📝</div> Minutes</a>` : '')
         : '<p style="color:rgba(245,237,228,0.3);font-size:12px;font-style:italic;margin-top:4px;">Documents not yet available</p>';
 
-      document.getElementById('player-panel').classList.add('active');
+      document.getElementById('detail-placeholder').style.display = 'none';
+      document.getElementById('detail-content').classList.add('active');
     }
 
     function closePlayer() {
       document.getElementById('yt-player').src = '';
-      document.getElementById('player-panel').classList.remove('active');
+      document.getElementById('detail-content').classList.remove('active');
+      document.getElementById('detail-placeholder').style.display = '';
       if (activeRow) { document.getElementById(activeRow)?.classList.remove('playing'); activeRow = null; }
     }
 
