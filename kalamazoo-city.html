@@ -132,313 +132,24 @@
       color: rgba(245,237,228,0.35);
     }
 
-    /* ── MAIN SPLIT ── */
-    .main-split {
-      flex: 1;
-      min-height: 0;
-      display: flex;
-      overflow: hidden;
-    }
-
-    /* ── LIST PANE ── */
-    .list-pane {
-      width: 100%;
-      overflow-y: auto;
-      background: var(--ink);
-    }
-
-    .main-split.is-playing .list-pane {
-      width: 34%;
+    /* ── PLAYER PANEL ── */
+    .player-panel {
+      display: none;
       flex-shrink: 0;
-      border-right: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .list-heading {
-      display: none;
-    }
-    .main-split.is-playing .list-heading {
-      display: block;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(245,237,228,0.3);
-      padding: 12px 16px 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      position: sticky;
-      top: 0;
+      height: clamp(300px, 52vh, 430px);
       background: var(--ink);
-      z-index: 10;
+      border-bottom: 2px solid var(--accent);
     }
+    .player-panel.active { display: flex; }
 
-    /* ── MEETING CARD — CINEMATIC BROWSE ── */
-    .meeting-row {
+    .player-video {
       position: relative;
-      height: clamp(180px, 26vh, 260px);
-      overflow: hidden;
-      cursor: pointer;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    /* Full-bleed thumbnail background */
-    .card-bg {
-      position: absolute;
-      inset: 0;
-    }
-
-    .card-bg img {
-      width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.38);
-      transition: filter 0.22s;
-    }
-
-    .meeting-row:hover   .card-bg img { filter: brightness(0.50); }
-    .meeting-row.playing .card-bg img { filter: brightness(0.28); }
-
-    /* Gradient: bottom darkening for text legibility */
-    .card-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        transparent 30%,
-        rgba(26,18,8,0.7) 100%
-      );
-    }
-
-    /* Overlay layout */
-    .card-overlay {
-      position: absolute;
-      inset: 0;
-      padding: 20px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .meeting-date {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(245,237,228,0.55);
-    }
-
-    /* Playing indicator */
-    .card-now-playing {
-      display: none;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(184,134,11,0.15);
-      border: 1px solid rgba(184,134,11,0.3);
-      border-radius: 3px;
-      padding: 3px 8px;
-    }
-    .meeting-row.playing .card-now-playing { display: block; }
-
-    .card-bottom {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .card-bottom-left { flex: 1; }
-
-    .meeting-type {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(20px, 2.6vw, 36px);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1;
-      color: var(--light);
-      margin-bottom: 10px;
-    }
-
-    .meeting-docs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .doc-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(245,237,228,0.75);
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 3px;
-      border: 1px solid rgba(245,237,228,0.2);
-      background: rgba(245,237,228,0.07);
-      transition: background 0.12s, border-color 0.12s;
-    }
-    .doc-pill:hover { background: rgba(184,134,11,0.25); border-color: var(--accent); color: var(--light); }
-
-    .doc-none {
-      font-size: 11px;
-      color: rgba(245,237,228,0.25);
-      font-style: italic;
-    }
-
-    /* Centered play button */
-    .card-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    }
-
-    .card-play-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(184,134,11,0.75);
-      border: 2px solid rgba(184,134,11,0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: #fff;
-      transition: transform 0.15s, background 0.15s, opacity 0.15s;
-      opacity: 0.85;
-    }
-    .meeting-row:hover   .card-play-btn { transform: scale(1.12); background: var(--accent); opacity: 1; }
-    .meeting-row.playing .card-play-btn { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
-
-    /* ── MEETING ROW — PLAYING (compact sidebar) ── */
-    .main-split.is-playing .meeting-row {
-      height: auto;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      border-left: 3px solid transparent;
-    }
-
-    .main-split.is-playing .meeting-row:hover   { border-left-color: rgba(184,134,11,0.5); }
-    .main-split.is-playing .meeting-row.playing { border-left-color: var(--accent); }
-
-    .main-split.is-playing .card-bg,
-    .main-split.is-playing .card-play { display: none; }
-
-    .main-split.is-playing .card-overlay {
-      position: static;
-      padding: 0;
-      display: grid;
-      grid-template-columns: 1fr 72px;
-      align-items: stretch;
-    }
-
-    .main-split.is-playing .card-top    { display: none; }
-    .main-split.is-playing .card-bottom {
-      padding: 10px 12px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 5px;
-    }
-
-    .main-split.is-playing .card-bottom-left { flex: none; }
-
-    .main-split.is-playing .meeting-date {
-      display: block;
-      font-size: 10px;
-      color: rgba(245,237,228,0.35);
-      margin-bottom: 2px;
-      letter-spacing: 0.06em;
-    }
-
-    .main-split.is-playing .meeting-type {
-      font-size: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0;
-      color: var(--light);
-      margin-bottom: 5px;
-    }
-
-    .main-split.is-playing .doc-pill {
-      font-size: 10px;
-      padding: 2px 7px;
-    }
-
-    /* Compact thumbnail in sidebar */
-    .card-thumb-small {
-      display: none;
-    }
-
-    .main-split.is-playing .card-thumb-small {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      background: #000;
-      border-left: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .main-split.is-playing .card-thumb-small img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      opacity: 0.6;
-      transition: opacity 0.12s;
-    }
-
-    .main-split.is-playing .meeting-row:hover .card-thumb-small img { opacity: 0.8; }
-    .main-split.is-playing .meeting-row.playing .card-thumb-small img { opacity: 0.4; }
-
-    .no-results {
-      padding: 60px 48px;
-      font-family: 'Fraunces', serif;
-      font-size: 18px;
-      font-style: italic;
-      color: rgba(245,237,228,0.3);
-    }
-
-    /* ── DETAIL PANE ── */
-    .detail-pane {
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      background: #1a1208;
-    }
-
-    .main-split.is-playing .detail-pane {
-      display: flex;
-      flex: 1;
-    }
-
-    .detail-content {
-      flex: 1;
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .detail-content.active { display: flex; }
-
-    .detail-video {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
+      aspect-ratio: 16 / 9;
       flex-shrink: 0;
       background: #000;
     }
-
-    .detail-video iframe {
+    .player-video iframe {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -446,35 +157,35 @@
       border: none;
     }
 
-    .detail-info {
-      padding: 20px 28px 24px;
+    .player-sidebar {
+      flex: 1;
+      padding: 24px 32px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       overflow-y: auto;
-      flex: 1;
     }
 
-    .detail-meta-date {
-      font-size: 10px;
-      color: rgba(245,237,228,0.4);
+    .player-meta-date {
+      font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      color: rgba(245,237,228,0.4);
     }
 
-    .detail-title {
+    .player-title {
       font-family: 'Fraunces', serif;
-      font-size: 20px;
+      font-size: clamp(18px, 2vw, 26px);
       font-weight: 700;
       color: var(--light);
       letter-spacing: -0.02em;
       line-height: 1.2;
     }
 
-    .detail-links {
+    .player-docs {
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
 
     .doc-link {
@@ -505,8 +216,8 @@
       flex-shrink: 0;
     }
 
-    .detail-close {
-      margin-top: 4px;
+    .player-close {
+      margin-top: auto;
       align-self: flex-start;
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(245,237,228,0.18);
@@ -519,16 +230,146 @@
       padding: 6px 14px;
       transition: background 0.12s, color 0.12s;
     }
-    .detail-close:hover { background: rgba(255,255,255,0.14); color: var(--light); }
+    .player-close:hover { background: rgba(255,255,255,0.14); color: var(--light); }
+
+    /* ── SCROLL AREA ── */
+    .scroll-area {
+      flex: 1;
+      overflow-y: auto;
+      min-height: 0;
+    }
+
+    .list-section-heading {
+      padding: 22px 48px 8px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── MEETING ROW ── */
+    .meeting-row {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 8px;
+      align-items: center;
+      padding: 18px 24px 18px 48px;
+      border-bottom: 1px solid var(--rule);
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    .meeting-row:hover { background: rgba(26,18,8,0.04); }
+    .meeting-row.playing { background: rgba(184,134,11,0.07); border-left: 3px solid var(--accent); padding-left: 45px; }
+
+    .meeting-info { display: flex; flex-direction: column; gap: 6px; }
+
+    .meeting-date {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .meeting-type {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .meeting-docs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .doc-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 3px 10px;
+      border-radius: 3px;
+      border: 1px solid var(--rule);
+      background: transparent;
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+    }
+    .doc-pill:hover { background: rgba(184,134,11,0.1); border-color: var(--accent); color: var(--ink); }
+
+    .doc-none {
+      font-size: 11px;
+      color: var(--muted);
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    /* ── THUMBNAIL ── */
+    .meeting-thumb {
+      position: relative;
+      width: 160px;
+      aspect-ratio: 16 / 9;
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--ink);
+      flex-shrink: 0;
+    }
+    .meeting-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.15s;
+    }
+    .meeting-row:hover .meeting-thumb img { opacity: 0.85; }
+
+    .thumb-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .meeting-row:hover .thumb-play { opacity: 1; }
+
+    .thumb-play-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(184,134,11,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .no-results {
+      padding: 60px 48px;
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--muted);
+    }
 
     /* ── MOBILE ── */
     @media (max-width: 680px) {
       header { padding: 18px 20px; }
       .filter-bar { padding: 10px 20px; }
-      .meeting-row { height: clamp(150px, 35vw, 220px); }
-      .main-split.is-playing { flex-direction: column; }
-      .main-split.is-playing .list-pane { width: 100%; flex-shrink: 0; max-height: 40vh; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-      .main-split.is-playing .detail-pane { flex: 1; }
+      .meeting-row { padding: 14px 20px; grid-template-columns: 1fr 100px; }
+      .player-panel { flex-direction: column; height: auto; }
+      .player-video { width: 100%; aspect-ratio: 16/9; height: auto; }
+      .list-section-heading { padding: 16px 20px 8px; }
     }
   </style>
 </head>
@@ -567,30 +408,23 @@
     <span class="filter-count" id="filter-count"></span>
   </div>
 
-  <!-- MAIN SPLIT -->
-  <div class="main-split" id="main-split">
-
-    <!-- LIST PANE -->
-    <div class="list-pane">
-      <div class="list-heading">All Meetings</div>
-      <div id="meeting-list"></div>
+  <!-- PLAYER PANEL -->
+  <div class="player-panel" id="player-panel">
+    <div class="player-video">
+      <iframe id="yt-player" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
     </div>
-
-    <!-- DETAIL / PLAYER PANE -->
-    <div class="detail-pane">
-      <div class="detail-content" id="detail-content">
-        <div class="detail-video">
-          <iframe id="yt-player" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-        </div>
-        <div class="detail-info">
-          <div class="detail-meta-date" id="detail-meta-date"></div>
-          <div class="detail-title" id="detail-title"></div>
-          <div class="detail-links" id="detail-links"></div>
-          <button class="detail-close" onclick="closePlayer()">✕ Close player</button>
-        </div>
-      </div>
+    <div class="player-sidebar">
+      <div class="player-meta-date" id="player-meta-date"></div>
+      <div class="player-title" id="player-title"></div>
+      <div class="player-docs" id="player-docs"></div>
+      <button class="player-close" onclick="closePlayer()">✕ Close player</button>
     </div>
+  </div>
 
+  <!-- SCROLL AREA -->
+  <div class="scroll-area">
+    <div class="list-section-heading" id="list-heading"></div>
+    <div id="meeting-list"></div>
   </div>
 
   <script>
@@ -629,6 +463,10 @@
       document.getElementById('filter-count').textContent =
         filtered.length + ' meeting' + (filtered.length !== 1 ? 's' : '');
 
+      document.getElementById('list-heading').textContent =
+        filtered.length + ' meeting' + (filtered.length !== 1 ? 's' : '') + ' — ' +
+        (month === 'all' ? year : document.getElementById('month-select').options[document.getElementById('month-select').selectedIndex].text + ' ' + year);
+
       const list = document.getElementById('meeting-list');
 
       if (filtered.length === 0) {
@@ -637,37 +475,21 @@
       }
 
       list.innerHTML = filtered.map((m, i) => `
-        <div class="meeting-row" id="row-${i}" onclick="playVideo('${m.vid}','${m.date}','${m.type}',${m.agenda ? `'${m.agenda}'` : 'null'},${m.minutes ? `'${m.minutes}'` : 'null'},'row-${i}')">
-
-          <div class="card-bg">
-            <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="">
-          </div>
-
-          <div class="card-play">
-            <div class="card-play-btn">▶</div>
-          </div>
-
-          <div class="card-overlay">
-            <div class="card-top">
-              <div class="meeting-date">${m.date}</div>
-              <div class="card-now-playing">Now playing</div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-bottom-left">
-                <div class="meeting-type">${m.type}</div>
-                <div class="meeting-docs">
-                  ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
-                  ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
-                  ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
-                </div>
-              </div>
+        <div class="meeting-row${activeRow === 'row-' + i ? ' playing' : ''}" id="row-${i}"
+             onclick="playVideo('${m.vid}','${m.date}','${m.type}',${m.agenda ? `'${m.agenda}'` : 'null'},${m.minutes ? `'${m.minutes}'` : 'null'},'row-${i}')">
+          <div class="meeting-info">
+            <div class="meeting-date">${m.date}</div>
+            <div class="meeting-type">${m.type}</div>
+            <div class="meeting-docs">
+              ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
+              ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
+              ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
             </div>
           </div>
-
-          <div class="card-thumb-small">
+          <div class="meeting-thumb">
             <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="">
+            <div class="thumb-play"><div class="thumb-play-btn">▶</div></div>
           </div>
-
         </div>
       `).join('');
     }
@@ -679,23 +501,21 @@
 
       document.getElementById('yt-player').src =
         'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
-      document.getElementById('detail-meta-date').textContent = date;
-      document.getElementById('detail-title').textContent = type;
+      document.getElementById('player-meta-date').textContent = date;
+      document.getElementById('player-title').textContent = type;
 
-      const linksEl = document.getElementById('detail-links');
-      linksEl.innerHTML = agendaUrl || minutesUrl
+      const docsEl = document.getElementById('player-docs');
+      docsEl.innerHTML = agendaUrl || minutesUrl
         ? (agendaUrl  ? `<a class="doc-link" href="${agendaUrl}"  target="_blank"><div class="doc-icon">📄</div> Agenda</a>`  : '')
         + (minutesUrl ? `<a class="doc-link" href="${minutesUrl}" target="_blank"><div class="doc-icon">📝</div> Minutes</a>` : '')
-        : '<p style="color:rgba(245,237,228,0.3);font-size:12px;font-style:italic;margin-top:4px;">Documents not yet available</p>';
+        : '<p style="color:var(--muted);font-size:12px;font-style:italic;margin-top:4px;">Documents not yet available</p>';
 
-      document.getElementById('detail-content').classList.add('active');
-      document.getElementById('main-split').classList.add('is-playing');
+      document.getElementById('player-panel').classList.add('active');
     }
 
     function closePlayer() {
       document.getElementById('yt-player').src = '';
-      document.getElementById('detail-content').classList.remove('active');
-      document.getElementById('main-split').classList.remove('is-playing');
+      document.getElementById('player-panel').classList.remove('active');
       if (activeRow) { document.getElementById(activeRow)?.classList.remove('playing'); activeRow = null; }
     }
 
