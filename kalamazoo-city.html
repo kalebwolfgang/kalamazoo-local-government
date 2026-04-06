@@ -220,7 +220,7 @@
 
     /* ── SIDEBAR CONTENT ── */
     .sidebar-body {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.65;
       color: var(--ink);
     }
@@ -228,7 +228,7 @@
     .sidebar-body p:last-child { margin-bottom: 0; }
 
     .sidebar-note {
-      font-size: 12.5px;
+      font-size: 14px;
       color: var(--muted);
       font-style: italic;
       line-height: 1.5;
@@ -245,7 +245,7 @@
       border: 1.5px solid var(--rule);
       text-decoration: none;
       color: var(--ink);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 500;
       transition: background 0.12s, border-color 0.12s, transform 0.1s;
     }
@@ -265,7 +265,7 @@
     }
 
     .link-label-title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--ink);
       white-space: nowrap;
@@ -274,10 +274,10 @@
     }
 
     .link-label-sub {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--muted);
       font-weight: 500;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
     }
 
     .link-arrow {
@@ -313,41 +313,43 @@
     .link-icon.fb      { background: #1877f2; }
     .link-icon.default { background: var(--accent); }
 
+    /* ── COMMENT RULES ── */
     .comment-rule {
-      padding: 12px 15px;
+      padding: 13px 15px;
       border-radius: 8px;
       background: #fff;
       border: 1px solid var(--rule);
     }
 
     .comment-rule-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .comment-rule-text {
-      font-size: 13.5px;
+      font-size: 15px;
       line-height: 1.6;
       color: var(--ink);
     }
 
+    /* ── COMMISSIONERS ── */
     .commissioner-row {
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      padding: 12px 15px;
+      gap: 4px;
+      padding: 13px 15px;
       border-radius: 8px;
       background: #fff;
       border: 1px solid var(--rule);
     }
 
     .commissioner-role {
-      font-size: 10px;
-      font-weight: 600;
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
@@ -355,25 +357,21 @@
 
     .commissioner-name {
       font-family: 'Fraunces', serif;
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 700;
       color: var(--ink);
       letter-spacing: -0.01em;
     }
 
+    /* Plain selectable email — not a link */
     .commissioner-email {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 13px;
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      transition: color 0.12s;
-      word-break: break-all;
+      font-size: 14px;
+      color: var(--muted);
       font-weight: 500;
+      word-break: break-all;
+      user-select: text;
+      cursor: text;
     }
-    .commissioner-email:hover { color: var(--ink); }
 
     /* ── RIGHT PANEL ── */
     .right-panel {
@@ -415,10 +413,7 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    .meeting-info {
-      flex: 1;
-      min-width: 0;
-    }
+    .meeting-info { flex: 1; min-width: 0; }
 
     .meeting-date {
       font-size: 12px;
@@ -714,37 +709,37 @@
             <div class="commissioner-row">
               <div class="commissioner-role">Mayor</div>
               <div class="commissioner-name">David Anderson</div>
-              <a class="commissioner-email" href="mailto:Mayor&#64;kalamazoocity.org">&#9993; Mayor&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">Mayor&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Vice Mayor</div>
               <div class="commissioner-name">Drew Duncan</div>
-              <a class="commissioner-email" href="mailto:DuncanDM&#64;kalamazoocity.org">&#9993; DuncanDM&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">DuncanDM&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Jeanne Hess</div>
-              <a class="commissioner-email" href="mailto:HessJ&#64;kalamazoocity.org">&#9993; HessJ&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">HessJ&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Stephanie Hoffman</div>
-              <a class="commissioner-email" href="mailto:HoffmanS&#64;kalamazoocity.org">&#9993; HoffmanS&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">HoffmanS&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Chris Praedel</div>
-              <a class="commissioner-email" href="mailto:PraedelC&#64;kalamazoocity.org">&#9993; PraedelC&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">PraedelC&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Jae Slaby</div>
-              <a class="commissioner-email" href="mailto:SlabyJA&#64;kalamazoocity.org">&#9993; SlabyJA&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">SlabyJA&#64;kalamazoocity.org</span>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Alonzo Wilson</div>
-              <a class="commissioner-email" href="mailto:WilsonA&#64;kalamazoocity.org">&#9993; WilsonA&#64;kalamazoocity.org</a>
+              <span class="commissioner-email">WilsonA&#64;kalamazoocity.org</span>
             </div>
           </div>
         </div>
@@ -819,10 +814,10 @@
       }
 
       list.innerHTML = filtered.map(function(m) {
-        var agendaPill  = m.agenda  ? '<a class="doc-pill" href="' + m.agenda  + '" target="_blank">\uD83D\uDCC4 Agenda</a>'  : '';
-        var minutesPill = m.minutes ? '<a class="doc-pill" href="' + m.minutes + '" target="_blank">\uD83D\uDCDD Minutes</a>' : '';
+        var agendaPill    = m.agenda  ? '<a class="doc-pill" href="' + m.agenda  + '" target="_blank">\uD83D\uDCC4 Agenda</a>'  : '';
+        var minutesPill   = m.minutes ? '<a class="doc-pill" href="' + m.minutes + '" target="_blank">\uD83D\uDCDD Minutes</a>' : '';
         var recordingPill = '<a class="doc-pill" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">\u25B6 Recording</a>';
-        var noDocs = (!m.agenda && !m.minutes) ? '<span class="doc-none">Documents not yet available</span>' : '';
+        var noDocs        = (!m.agenda && !m.minutes) ? '<span class="doc-none">Documents not yet available</span>' : '';
         return '<div class="meeting-row">'
           + '<div class="meeting-info">'
           + '<div class="meeting-date">' + m.date + '</div>'
