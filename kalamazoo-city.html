@@ -85,11 +85,204 @@
       color: var(--light);
     }
 
+    /* ── BODY SPLIT ── */
+    .body-split {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .info-sidebar {
+      width: 300px;
+      flex-shrink: 0;
+      background: var(--card);
+      border-right: 2px solid var(--rule);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-section {
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .sidebar-section:last-child { border-bottom: none; }
+
+    .sidebar-section-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .sidebar-body {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+    .sidebar-body p { margin-bottom: 8px; }
+    .sidebar-body p:last-child { margin-bottom: 0; }
+
+    .sidebar-note {
+      font-size: 11px;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    /* stream links */
+    .stream-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .stream-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 12.5px;
+      font-weight: 500;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .stream-link:hover { background: rgba(184,134,11,0.08); border-color: var(--accent); }
+
+    .stream-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      color: #fff;
+      font-weight: 700;
+    }
+    .stream-icon.yt { background: #c00; }
+    .stream-icon.fb { background: #1877f2; }
+
+    /* portal / action links */
+    .action-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 12.5px;
+      font-weight: 500;
+      transition: background 0.12s, border-color 0.12s;
+      margin-top: 10px;
+    }
+    .action-link:hover { background: rgba(184,134,11,0.08); border-color: var(--accent); }
+    .action-link:first-child { margin-top: 0; }
+
+    .action-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* public comment rules */
+    .comment-rule {
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      margin-bottom: 7px;
+    }
+    .comment-rule:last-child { margin-bottom: 0; }
+
+    .comment-rule-label {
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .comment-rule-text {
+      font-size: 12px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    /* commissioners */
+    .commissioner-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .commissioner-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+    }
+
+    .commissioner-role {
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .commissioner-name {
+      font-family: 'Fraunces', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .commissioner-email {
+      font-size: 11.5px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.12s;
+      word-break: break-all;
+    }
+    .commissioner-email:hover { color: var(--accent); }
+
+    /* ── RIGHT PANEL ── */
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
     /* ── FILTER BAR ── */
     .filter-bar {
       background: var(--ink);
       border-bottom: 2px solid rgba(255,255,255,0.06);
-      padding: 10px 48px;
+      padding: 10px 36px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -133,113 +326,6 @@
       color: rgba(245,237,228,0.35);
     }
 
-    /* ── PLAYER PANEL ── */
-    .player-panel {
-      display: none;
-      flex-shrink: 0;
-      height: clamp(300px, 52vh, 430px);
-      background: var(--light);
-      border-bottom: 1px solid var(--rule);
-      box-shadow: 0 2px 16px rgba(26,18,8,0.08);
-    }
-    .player-panel.active { display: flex; }
-
-    .player-video {
-      position: relative;
-      height: 100%;
-      aspect-ratio: 16 / 9;
-      flex-shrink: 0;
-      background: #000;
-      border-radius: 0;
-      overflow: hidden;
-    }
-    .player-video iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .player-sidebar {
-      flex: 1;
-      padding: 28px 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      overflow-y: auto;
-      min-width: 0;
-    }
-
-    .player-meta-date {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .player-title {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(18px, 2vw, 26px);
-      font-weight: 700;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
-    .player-docs {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .doc-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: var(--bg);
-      text-decoration: none;
-      color: var(--ink);
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.12s;
-      border: 1px solid var(--rule);
-    }
-    .doc-link:hover { background: rgba(184,134,11,0.08); border-color: var(--accent); }
-
-    .doc-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      flex-shrink: 0;
-    }
-
-    .player-close {
-      margin-top: auto;
-      align-self: flex-start;
-      background: transparent;
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      color: var(--muted);
-      cursor: pointer;
-      font-size: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      padding: 7px 16px;
-      transition: background 0.12s, color 0.12s, border-color 0.12s;
-    }
-    .player-close:hover { background: var(--bg); border-color: var(--muted); color: var(--ink); }
-
     /* ── SCROLL AREA ── */
     .scroll-area {
       flex: 1;
@@ -247,9 +333,8 @@
       min-height: 0;
     }
 
-    /* ── INNER CONTAINER — max-width centering ── */
     .list-inner {
-      max-width: 860px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 0 32px;
     }
@@ -269,25 +354,9 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      padding: 18px 0;
+      padding: 18px 12px;
       border-bottom: 1px solid var(--rule);
-      cursor: pointer;
-      transition: background 0.12s;
-      border-radius: 0;
       margin: 0 -12px;
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-    .meeting-row:hover {
-      background: rgba(26,18,8,0.035);
-      border-radius: 12px;
-      border-bottom-color: transparent;
-    }
-    .meeting-row:hover + .meeting-row { border-top: 1px solid transparent; }
-    .meeting-row.playing {
-      background: rgba(184,134,11,0.07);
-      border-radius: 12px;
-      border-bottom-color: transparent;
     }
 
     .meeting-info {
@@ -315,11 +384,12 @@
       color: var(--ink);
     }
 
-    .meeting-docs {
+    .meeting-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 6px;
+      margin-top: 7px;
+      align-items: center;
     }
 
     .doc-pill {
@@ -355,15 +425,18 @@
       background: var(--ink);
       flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(26,18,8,0.12);
+      text-decoration: none;
+      display: block;
     }
+
     .meeting-thumb img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.2s, opacity 0.15s;
+      transition: transform 0.2s;
     }
-    .meeting-row:hover .meeting-thumb img { transform: scale(1.03); }
+    .meeting-thumb:hover img { transform: scale(1.04); }
 
     .thumb-play {
       position: absolute;
@@ -373,15 +446,15 @@
       justify-content: center;
       opacity: 0;
       transition: opacity 0.15s;
-      background: rgba(26,18,8,0.2);
+      background: rgba(26,18,8,0.22);
     }
-    .meeting-row:hover .thumb-play { opacity: 1; }
+    .meeting-thumb:hover .thumb-play { opacity: 1; }
 
     .thumb-play-btn {
       width: 34px;
       height: 34px;
       border-radius: 50%;
-      background: rgba(184,134,11,0.9);
+      background: rgba(184,134,11,0.92);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -399,16 +472,22 @@
     }
 
     /* ── MOBILE ── */
-    @media (max-width: 680px) {
+    @media (max-width: 760px) {
+      html, body { overflow: auto; height: auto; }
+      .body-split { flex-direction: column; }
+      .info-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--rule);
+        overflow-y: visible;
+      }
       header { padding: 18px 20px; }
       .filter-bar { padding: 10px 20px; }
       .list-inner { padding: 0 20px; }
       .meeting-row { gap: 14px; }
       .meeting-thumb { width: 100px; }
       .meeting-type { font-size: 16px; }
-      .player-panel { flex-direction: column; height: auto; }
-      .player-video { width: 100%; aspect-ratio: 16/9; height: auto; }
-      .player-sidebar { padding: 20px; }
+      .scroll-area { overflow-y: visible; }
     }
   </style>
 </head>
@@ -423,48 +502,159 @@
     <div></div>
   </header>
 
-  <!-- FILTER BAR -->
-  <div class="filter-bar">
-    <span class="filter-label">Filter</span>
-    <select class="filter-select" id="year-select" onchange="onYearChange()">
-      <option value="2026">2026</option>
-    </select>
-    <select class="filter-select" id="month-select" onchange="renderMeetings()">
-      <option value="all">All months</option>
-      <option value="1">January</option>
-      <option value="2">February</option>
-      <option value="3">March</option>
-      <option value="4">April</option>
-      <option value="5">May</option>
-      <option value="6">June</option>
-      <option value="7">July</option>
-      <option value="8">August</option>
-      <option value="9">September</option>
-      <option value="10">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
-    </select>
-    <span class="filter-count" id="filter-count"></span>
-  </div>
+  <div class="body-split">
 
-  <!-- PLAYER PANEL -->
-  <div class="player-panel" id="player-panel">
-    <div class="player-video">
-      <iframe id="yt-player" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    </div>
-    <div class="player-sidebar">
-      <div class="player-meta-date" id="player-meta-date"></div>
-      <div class="player-title" id="player-title"></div>
-      <div class="player-docs" id="player-docs"></div>
-      <button class="player-close" onclick="closePlayer()">✕  Close player</button>
-    </div>
-  </div>
+    <!-- ── LEFT SIDEBAR ── -->
+    <aside class="info-sidebar">
 
-  <!-- SCROLL AREA -->
-  <div class="scroll-area">
-    <div class="list-inner">
-      <div class="list-section-heading" id="list-heading"></div>
-      <div id="meeting-list"></div>
+      <!-- Live Streams -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Watch Live</div>
+        <div class="stream-links">
+          <a class="stream-link" href="https://www.youtube.com/@KalamazooCityTV" target="_blank">
+            <div class="stream-icon yt">▶</div>
+            YouTube — KalamazooCityTV
+          </a>
+          <a class="stream-link" href="https://www.facebook.com/KalamazooCity" target="_blank">
+            <div class="stream-icon fb">f</div>
+            Facebook — KalamazooCity
+          </a>
+        </div>
+      </div>
+
+      <!-- Meeting Schedule -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Meeting Schedule</div>
+        <div class="sidebar-body">
+          <p>Committee of the Whole at <strong>5:00 p.m.</strong><br>Regular Business Meeting at <strong>7:00 p.m.</strong></p>
+          <p>Typically the <strong>first and third Mondays</strong> of each month. Dates may shift — confirm upcoming meetings before attending.</p>
+        </div>
+        <a class="action-link" href="https://www.kalamazoocity.org/Government/Boards-Commissions/City-Commission" target="_blank">
+          <div class="action-icon">📅</div>
+          Confirm Meeting Dates
+        </a>
+      </div>
+
+      <!-- Agendas & Minutes -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Agendas &amp; Minutes</div>
+        <div class="sidebar-body" style="margin-bottom:10px;">
+          <p>All agendas and approved minutes are posted through the CivicClerk portal.</p>
+        </div>
+        <a class="action-link" style="margin-top:0;" href="https://kalamazoomi.portal.civicclerk.com" target="_blank">
+          <div class="action-icon">📄</div>
+          CivicClerk Portal
+        </a>
+      </div>
+
+      <!-- Public Comment -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Public Comment Rules</div>
+        <div class="sidebar-note">Policy 10-1 · Updated November 12, 2024</div>
+
+        <div class="comment-rule">
+          <div class="comment-rule-label">Regular Business Meetings</div>
+          <div class="comment-rule-text">General comments: <strong>3 min.</strong> During the Public Comments agenda section: <strong>4 min.</strong> Time may be extended by the chair or by vote.</div>
+        </div>
+
+        <div class="comment-rule">
+          <div class="comment-rule-label">Committee of the Whole / Special Meetings</div>
+          <div class="comment-rule-text">Limited to matters on that meeting's agenda. Individual speakers: <strong>2 min.</strong></div>
+        </div>
+
+        <div class="comment-rule">
+          <div class="comment-rule-label">Identification Required</div>
+          <div class="comment-rule-text">State your name and whether you reside in the City of Kalamazoo.</div>
+        </div>
+
+        <div class="comment-rule">
+          <div class="comment-rule-label">What You Can Speak To</div>
+          <div class="comment-rule-text">All action items on the agenda, except Consent Agenda items, votes setting a public hearing, or secondary motions.</div>
+        </div>
+
+        <div class="comment-rule">
+          <div class="comment-rule-label">Written Proposals</div>
+          <div class="comment-rule-text">File with the City Clerk. Included in a Clerk's agenda report within <strong>21 days</strong> of receipt.</div>
+        </div>
+      </div>
+
+      <!-- Commissioners -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Commissioners</div>
+        <div class="commissioner-list">
+          <div class="commissioner-row">
+            <div class="commissioner-role">Mayor</div>
+            <div class="commissioner-name">David Anderson</div>
+            <a class="commissioner-email" href="mailto:Mayor@kalamazoocity.org">Mayor@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Vice Mayor</div>
+            <div class="commissioner-name">Drew Duncan</div>
+            <a class="commissioner-email" href="mailto:DuncanDM@kalamazoocity.org">DuncanDM@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Commissioner</div>
+            <div class="commissioner-name">Jeanne Hess</div>
+            <a class="commissioner-email" href="mailto:HessJ@kalamazoocity.org">HessJ@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Commissioner</div>
+            <div class="commissioner-name">Stephanie Hoffman</div>
+            <a class="commissioner-email" href="mailto:HoffmanS@kalamazoocity.org">HoffmanS@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Commissioner</div>
+            <div class="commissioner-name">Chris Praedel</div>
+            <a class="commissioner-email" href="mailto:PraedelC@kalamazoocity.org">PraedelC@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Commissioner</div>
+            <div class="commissioner-name">Jae Slaby</div>
+            <a class="commissioner-email" href="mailto:SlabyJA@kalamazoocity.org">SlabyJA@kalamazoocity.org</a>
+          </div>
+          <div class="commissioner-row">
+            <div class="commissioner-role">Commissioner</div>
+            <div class="commissioner-name">Alonzo Wilson</div>
+            <a class="commissioner-email" href="mailto:WilsonA@kalamazoocity.org">WilsonA@kalamazoocity.org</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ── RIGHT PANEL ── -->
+    <div class="right-panel">
+
+      <div class="filter-bar">
+        <span class="filter-label">Filter</span>
+        <select class="filter-select" id="year-select" onchange="onYearChange()">
+          <option value="2026">2026</option>
+        </select>
+        <select class="filter-select" id="month-select" onchange="renderMeetings()">
+          <option value="all">All months</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <span class="filter-count" id="filter-count"></span>
+      </div>
+
+      <div class="scroll-area">
+        <div class="list-inner">
+          <div class="list-section-heading" id="list-heading"></div>
+          <div id="meeting-list"></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -483,8 +673,6 @@
       { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Regular Business Meeting', vid: 'upL1eEYIMCE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727' },
       { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',   vid: 'SwI5GDHpHNk', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620' },
     ];
-
-    let activeRow = null;
 
     function onYearChange() {
       document.getElementById('month-select').value = 'all';
@@ -517,49 +705,23 @@
         return;
       }
 
-      list.innerHTML = filtered.map((m, i) => `
-        <div class="meeting-row${activeRow === 'row-' + i ? ' playing' : ''}" id="row-${i}"
-             onclick="playVideo('${m.vid}','${m.date}','${m.type}',${m.agenda ? `'${m.agenda}'` : 'null'},${m.minutes ? `'${m.minutes}'` : 'null'},'row-${i}')">
+      list.innerHTML = filtered.map(m => `
+        <div class="meeting-row">
           <div class="meeting-info">
             <div class="meeting-date">${m.date}</div>
             <div class="meeting-type">${m.type}</div>
-            <div class="meeting-docs">
-              ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank" onclick="event.stopPropagation()">📄 Agenda</a>`  : ''}
-              ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank" onclick="event.stopPropagation()">📝 Minutes</a>` : ''}
-              ${!m.agenda && !m.minutes ? '<span class="doc-none">Not yet available</span>' : ''}
+            <div class="meeting-actions">
+              ${m.agenda  ? `<a class="doc-pill" href="${m.agenda}"  target="_blank">📄 Agenda</a>`  : ''}
+              ${m.minutes ? `<a class="doc-pill" href="${m.minutes}" target="_blank">📝 Minutes</a>` : ''}
+              ${!m.agenda && !m.minutes ? '<span class="doc-none">Documents not yet available</span>' : ''}
             </div>
           </div>
-          <div class="meeting-thumb">
-            <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="">
+          <a class="meeting-thumb" href="https://www.youtube.com/watch?v=${m.vid}" target="_blank">
+            <img src="https://img.youtube.com/vi/${m.vid}/maxresdefault.jpg" alt="${m.type} — ${m.date}">
             <div class="thumb-play"><div class="thumb-play-btn">▶</div></div>
-          </div>
+          </a>
         </div>
       `).join('');
-    }
-
-    function playVideo(videoId, date, type, agendaUrl, minutesUrl, rowId) {
-      if (activeRow) document.getElementById(activeRow)?.classList.remove('playing');
-      activeRow = rowId;
-      document.getElementById(rowId)?.classList.add('playing');
-
-      document.getElementById('yt-player').src =
-        'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
-      document.getElementById('player-meta-date').textContent = date;
-      document.getElementById('player-title').textContent = type;
-
-      const docsEl = document.getElementById('player-docs');
-      docsEl.innerHTML = agendaUrl || minutesUrl
-        ? (agendaUrl  ? `<a class="doc-link" href="${agendaUrl}"  target="_blank"><div class="doc-icon">📄</div> Agenda</a>`  : '')
-        + (minutesUrl ? `<a class="doc-link" href="${minutesUrl}" target="_blank"><div class="doc-icon">📝</div> Minutes</a>` : '')
-        : '<p style="color:var(--muted);font-size:12px;font-style:italic;margin-top:4px;">Documents not yet available</p>';
-
-      document.getElementById('player-panel').classList.add('active');
-    }
-
-    function closePlayer() {
-      document.getElementById('yt-player').src = '';
-      document.getElementById('player-panel').classList.remove('active');
-      if (activeRow) { document.getElementById(activeRow)?.classList.remove('playing'); activeRow = null; }
     }
 
     const latestMonth = String(Math.max(...meetings.map(m => m.month)));
