@@ -77,7 +77,7 @@
 
     .header-title {
       font-family: 'Fraunces', serif;
-      font-size: clamp(24px, 4vw, 48px);
+      font-size: clamp(22px, 4vw, 48px);
       font-weight: 900;
       letter-spacing: -0.04em;
       line-height: 1;
@@ -129,6 +129,11 @@
       font-size: 18px;
       font-style: italic;
       color: rgba(245,237,228,0.35);
+    }
+
+    /* Mobile info toggle button — hidden on desktop */
+    .info-toggle {
+      display: none;
     }
 
     /* ── BODY SPLIT ── */
@@ -363,7 +368,6 @@
       letter-spacing: -0.01em;
     }
 
-    /* Plain selectable email — not a link */
     .commissioner-email {
       font-size: 14px;
       color: var(--muted);
@@ -534,20 +538,163 @@
       color: var(--muted);
     }
 
-    /* ── MOBILE ── */
+    /* ════════════════════════════════
+       MOBILE
+    ════════════════════════════════ */
     @media (max-width: 800px) {
+
+      /* Unlock page scroll */
       html, body { overflow: auto; height: auto; }
-      .body-split { flex-direction: column; overflow: visible; }
-      .right-panel { overflow: visible; }
-      .info-sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--rule); overflow-y: visible; }
-      header { padding: 18px 20px; }
-      .filter-bar { padding: 10px 20px; }
-      .list-inner { padding: 0 20px; }
-      .meeting-row { gap: 16px; }
-      .meeting-thumb { width: 120px; }
-      .meeting-type { font-size: 18px; }
+
+      /* Header */
+      header {
+        padding: 14px 16px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px 12px;
+      }
+
+      .back {
+        font-size: 11px;
+        padding: 7px 12px;
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .header-center {
+        grid-row: 1;
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .header-eyebrow { font-size: 9px; margin-bottom: 2px; }
+
+      .header-title { font-size: clamp(18px, 5vw, 26px); }
+
+      /* Filter bar */
+      .filter-bar {
+        padding: 10px 16px;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .filter-label { font-size: 12px; }
+
+      .filter-select {
+        font-size: 14px;
+        padding: 7px 32px 7px 12px;
+        border-radius: 6px;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .filter-count {
+        font-size: 14px;
+        margin-left: 0;
+        width: 100%;
+        padding-top: 2px;
+        color: rgba(245,237,228,0.45);
+      }
+
+      /* Info toggle button */
+      .info-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 14px 16px;
+        background: var(--card);
+        border: none;
+        border-bottom: 2px solid var(--rule);
+        cursor: pointer;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        flex-shrink: 0;
+      }
+
+      .info-toggle-label { display: flex; align-items: center; gap: 8px; }
+      .info-toggle-icon { font-size: 16px; }
+      .info-toggle-chevron {
+        font-size: 13px;
+        color: var(--muted);
+        transition: transform 0.22s ease;
+      }
+      .info-toggle.open .info-toggle-chevron { transform: rotate(180deg); }
+
+      /* Body split stacks vertically */
+      .body-split {
+        flex-direction: column;
+        overflow: visible;
+      }
+
+      /* Sidebar hidden by default on mobile, shown when toggled */
+      .info-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--rule);
+        overflow-y: visible;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        display: block;
+      }
+      .info-sidebar.open {
+        max-height: 9999px;
+        overflow-y: visible;
+      }
+
+      /* Accordion pills smaller on mobile */
+      .accordion-pill { font-size: 20px; padding: 7px 16px 7px 12px; }
+      .accordion-pill-icon { font-size: 17px; }
+      .accordion-trigger { padding: 14px 16px; }
+      .accordion-inner { margin: 0 12px 12px; padding: 14px; }
+
+      /* Sidebar content sizes */
+      .sidebar-body { font-size: 15px; }
+      .sidebar-note { font-size: 13px; }
+      .stream-link, .action-link { font-size: 14px; padding: 10px 12px; }
+      .link-label-title { font-size: 14px; }
+      .link-label-sub { font-size: 12px; }
+      .comment-rule-label { font-size: 12px; }
+      .comment-rule-text { font-size: 14px; }
+      .commissioner-name { font-size: 17px; }
+      .commissioner-email { font-size: 13px; }
+
+      /* Right panel */
+      .right-panel { overflow: visible; min-height: 0; }
       .scroll-area { overflow-y: visible; }
-      .accordion-pill { font-size: 20px; }
+      .list-inner { padding: 0 16px; }
+
+      /* Meeting rows stack vertically on mobile */
+      .meeting-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 0;
+      }
+
+      /* Thumbnail goes full width below the info */
+      .meeting-thumb {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      .meeting-type { font-size: 22px; }
+
+      .doc-pill { font-size: 12px; padding: 6px 12px; }
+
+      .list-section-heading { padding: 16px 0 10px; }
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px) {
+      .accordion-pill { font-size: 17px; }
+      .header-title { font-size: 17px; }
     }
   </style>
 </head>
@@ -559,7 +706,6 @@
       <div class="header-eyebrow">Kalamazoo Local Government</div>
       <div class="header-title">Kalamazoo City Commission</div>
     </div>
-    <div></div>
   </header>
 
   <div class="filter-bar">
@@ -585,12 +731,20 @@
     <span class="filter-count" id="filter-count"></span>
   </div>
 
+  <!-- Mobile-only info toggle -->
+  <button class="info-toggle" id="info-toggle" onclick="toggleMobileInfo()">
+    <span class="info-toggle-label">
+      <span class="info-toggle-icon">&#9432;</span>
+      Commission Info
+    </span>
+    <span class="info-toggle-chevron">&#9660;</span>
+  </button>
+
   <div class="body-split">
 
     <!-- LEFT SIDEBAR -->
-    <aside class="info-sidebar">
+    <aside class="info-sidebar" id="info-sidebar">
 
-      <!-- Watch Live (open by default) -->
       <div class="accordion-item open" id="acc-watch">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-watch')">
           <span class="accordion-pill"><span class="accordion-pill-icon">&#128250;</span> Watch Live</span>
@@ -618,7 +772,6 @@
         </div>
       </div>
 
-      <!-- Meeting Schedule -->
       <div class="accordion-item" id="acc-schedule">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-schedule')">
           <span class="accordion-pill"><span class="accordion-pill-icon">&#128197;</span> Schedule</span>
@@ -642,7 +795,6 @@
         </div>
       </div>
 
-      <!-- Agendas & Minutes -->
       <div class="accordion-item" id="acc-docs">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-docs')">
           <span class="accordion-pill"><span class="accordion-pill-icon">&#128196;</span> Agendas &amp; Minutes</span>
@@ -665,7 +817,6 @@
         </div>
       </div>
 
-      <!-- Public Comment -->
       <div class="accordion-item" id="acc-comment">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-comment')">
           <span class="accordion-pill"><span class="accordion-pill-icon">&#127908;</span> Public Comment</span>
@@ -698,7 +849,6 @@
         </div>
       </div>
 
-      <!-- Commissioners -->
       <div class="accordion-item" id="acc-commissioners">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-commissioners')">
           <span class="accordion-pill"><span class="accordion-pill-icon">&#127963;</span> Commissioners</span>
@@ -777,6 +927,13 @@
 
     function toggleAccordion(id) {
       document.getElementById(id).classList.toggle('open');
+    }
+
+    function toggleMobileInfo() {
+      var sidebar = document.getElementById('info-sidebar');
+      var btn     = document.getElementById('info-toggle');
+      sidebar.classList.toggle('open');
+      btn.classList.toggle('open');
     }
 
     function onYearChange() {
