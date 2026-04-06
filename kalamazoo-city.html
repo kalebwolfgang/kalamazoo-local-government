@@ -88,10 +88,10 @@
     .filter-bar {
       background: var(--ink);
       border-bottom: 2px solid rgba(255,255,255,0.06);
-      padding: 10px 36px;
+      padding: 12px 36px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex-shrink: 0;
       z-index: 100;
     }
@@ -136,9 +136,10 @@
       flex: 1;
       display: flex;
       min-height: 0;
+      overflow: hidden;
     }
 
-    /* ── LEFT SIDEBAR — 1/3 ── */
+    /* ── LEFT SIDEBAR ── */
     .info-sidebar {
       width: 33.333%;
       flex-shrink: 0;
@@ -150,9 +151,7 @@
     }
 
     /* ── ACCORDION ── */
-    .accordion-item {
-      border-bottom: 1px solid var(--rule);
-    }
+    .accordion-item { border-bottom: 1px solid var(--rule); }
     .accordion-item:last-child { border-bottom: none; }
 
     .accordion-trigger {
@@ -170,7 +169,6 @@
     }
     .accordion-trigger:hover { background: rgba(26,18,8,0.03); }
 
-    /* BIG pill title */
     .accordion-pill {
       display: inline-flex;
       align-items: center;
@@ -187,10 +185,7 @@
       white-space: nowrap;
     }
 
-    .accordion-pill-icon {
-      font-size: 20px;
-      line-height: 1;
-    }
+    .accordion-pill-icon { font-size: 20px; line-height: 1; }
 
     .accordion-chevron {
       flex-shrink: 0;
@@ -223,7 +218,7 @@
       gap: 10px;
     }
 
-    /* ── SIDEBAR INNER CONTENT ── */
+    /* ── SIDEBAR CONTENT ── */
     .sidebar-body {
       font-size: 15px;
       line-height: 1.65;
@@ -237,10 +232,8 @@
       color: var(--muted);
       font-style: italic;
       line-height: 1.5;
-      margin-bottom: 2px;
     }
 
-    /* Button-style links */
     .stream-link,
     .action-link {
       display: flex;
@@ -320,7 +313,6 @@
     .link-icon.fb      { background: #1877f2; }
     .link-icon.default { background: var(--accent); }
 
-    /* comment rules */
     .comment-rule {
       padding: 12px 15px;
       border-radius: 8px;
@@ -343,7 +335,6 @@
       color: var(--ink);
     }
 
-    /* commissioners */
     .commissioner-row {
       display: flex;
       flex-direction: column;
@@ -390,6 +381,8 @@
       display: flex;
       flex-direction: column;
       min-width: 0;
+      min-height: 0;
+      overflow: hidden;
     }
 
     .scroll-area {
@@ -398,7 +391,6 @@
       min-height: 0;
     }
 
-    /* full bleed — no max-width cap */
     .list-inner {
       width: 100%;
       padding: 0 40px;
@@ -480,7 +472,7 @@
       opacity: 0.6;
     }
 
-    /* ── THUMBNAIL — permanent play ── */
+    /* ── THUMBNAIL ── */
     .meeting-thumb {
       position: relative;
       width: clamp(180px, 18vw, 240px);
@@ -550,7 +542,8 @@
     /* ── MOBILE ── */
     @media (max-width: 800px) {
       html, body { overflow: auto; height: auto; }
-      .body-split { flex-direction: column; }
+      .body-split { flex-direction: column; overflow: visible; }
+      .right-panel { overflow: visible; }
       .info-sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--rule); overflow-y: visible; }
       header { padding: 18px 20px; }
       .filter-bar { padding: 10px 20px; }
@@ -558,15 +551,15 @@
       .meeting-row { gap: 16px; }
       .meeting-thumb { width: 120px; }
       .meeting-type { font-size: 18px; }
-      .accordion-pill { font-size: 20px; }
       .scroll-area { overflow-y: visible; }
+      .accordion-pill { font-size: 20px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="back">← All Municipalities</a>
+    <a href="index.html" class="back">&#8592; All Municipalities</a>
     <div class="header-center">
       <div class="header-eyebrow">Kalamazoo Local Government</div>
       <div class="header-title">Kalamazoo City Commission</div>
@@ -605,26 +598,26 @@
       <!-- Watch Live (open by default) -->
       <div class="accordion-item open" id="acc-watch">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-watch')">
-          <span class="accordion-pill"><span class="accordion-pill-icon">📺</span> Watch Live</span>
-          <span class="accordion-chevron">▼</span>
+          <span class="accordion-pill"><span class="accordion-pill-icon">&#128250;</span> Watch Live</span>
+          <span class="accordion-chevron">&#9660;</span>
         </button>
         <div class="accordion-body">
           <div class="accordion-inner">
             <a class="stream-link" href="https://www.youtube.com/@KalamazooCityTV" target="_blank">
-              <div class="link-icon yt">▶</div>
+              <div class="link-icon yt">&#9654;</div>
               <div class="link-label">
-                <div class="link-label-title">YouTube — KalamazooCityTV</div>
+                <div class="link-label-title">YouTube &#8212; KalamazooCityTV</div>
                 <div class="link-label-sub">Watch live &amp; past recordings</div>
               </div>
-              <div class="link-arrow">→</div>
+              <div class="link-arrow">&#8594;</div>
             </a>
             <a class="stream-link" href="https://www.facebook.com/KalamazooCity" target="_blank">
               <div class="link-icon fb">f</div>
               <div class="link-label">
-                <div class="link-label-title">Facebook — KalamazooCity</div>
+                <div class="link-label-title">Facebook &#8212; KalamazooCity</div>
                 <div class="link-label-sub">Watch live streams</div>
               </div>
-              <div class="link-arrow">→</div>
+              <div class="link-arrow">&#8594;</div>
             </a>
           </div>
         </div>
@@ -633,22 +626,22 @@
       <!-- Meeting Schedule -->
       <div class="accordion-item" id="acc-schedule">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-schedule')">
-          <span class="accordion-pill"><span class="accordion-pill-icon">📅</span> Schedule</span>
-          <span class="accordion-chevron">▼</span>
+          <span class="accordion-pill"><span class="accordion-pill-icon">&#128197;</span> Schedule</span>
+          <span class="accordion-chevron">&#9660;</span>
         </button>
         <div class="accordion-body">
           <div class="accordion-inner">
             <div class="sidebar-body">
               <p>Committee of the Whole at <strong>5:00 p.m.</strong><br>Regular Business Meeting at <strong>7:00 p.m.</strong></p>
-              <p>Typically the <strong>first and third Mondays</strong> of each month. Dates may shift — confirm before attending.</p>
+              <p>Typically the <strong>first and third Mondays</strong> of each month. Dates may shift &#8212; confirm before attending.</p>
             </div>
             <a class="action-link" href="https://www.kalamazoocity.org/Government/Boards-Commissions/City-Commission" target="_blank">
-              <div class="link-icon default">📅</div>
+              <div class="link-icon default">&#128197;</div>
               <div class="link-label">
                 <div class="link-label-title">Confirm Meeting Dates</div>
                 <div class="link-label-sub">kalamazoocity.org</div>
               </div>
-              <div class="link-arrow">→</div>
+              <div class="link-arrow">&#8594;</div>
             </a>
           </div>
         </div>
@@ -657,8 +650,8 @@
       <!-- Agendas & Minutes -->
       <div class="accordion-item" id="acc-docs">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-docs')">
-          <span class="accordion-pill"><span class="accordion-pill-icon">📄</span> Agendas &amp; Minutes</span>
-          <span class="accordion-chevron">▼</span>
+          <span class="accordion-pill"><span class="accordion-pill-icon">&#128196;</span> Agendas &amp; Minutes</span>
+          <span class="accordion-chevron">&#9660;</span>
         </button>
         <div class="accordion-body">
           <div class="accordion-inner">
@@ -666,12 +659,12 @@
               <p>All agendas and approved minutes are posted through the CivicClerk portal.</p>
             </div>
             <a class="action-link" href="https://kalamazoomi.portal.civicclerk.com" target="_blank">
-              <div class="link-icon default">📄</div>
+              <div class="link-icon default">&#128196;</div>
               <div class="link-label">
                 <div class="link-label-title">CivicClerk Portal</div>
                 <div class="link-label-sub">Agendas &amp; approved minutes</div>
               </div>
-              <div class="link-arrow">→</div>
+              <div class="link-arrow">&#8594;</div>
             </a>
           </div>
         </div>
@@ -680,19 +673,19 @@
       <!-- Public Comment -->
       <div class="accordion-item" id="acc-comment">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-comment')">
-          <span class="accordion-pill"><span class="accordion-pill-icon">🎙️</span> Public Comment</span>
-          <span class="accordion-chevron">▼</span>
+          <span class="accordion-pill"><span class="accordion-pill-icon">&#127908;</span> Public Comment</span>
+          <span class="accordion-chevron">&#9660;</span>
         </button>
         <div class="accordion-body">
           <div class="accordion-inner">
-            <div class="sidebar-note">Policy 10-1 · Updated November 12, 2024</div>
+            <div class="sidebar-note">Policy 10-1 &#183; Updated November 12, 2024</div>
             <div class="comment-rule">
               <div class="comment-rule-label">Regular Business Meetings</div>
               <div class="comment-rule-text">General comments: <strong>3 min.</strong> During the Public Comments section: <strong>4 min.</strong> Time may be extended by the chair or by vote.</div>
             </div>
             <div class="comment-rule">
               <div class="comment-rule-label">Committee of the Whole / Special Meetings</div>
-              <div class="comment-rule-text">Limited to matters on that meeting's agenda. Individual speakers: <strong>2 min.</strong></div>
+              <div class="comment-rule-text">Limited to matters on that meeting&#8217;s agenda. Individual speakers: <strong>2 min.</strong></div>
             </div>
             <div class="comment-rule">
               <div class="comment-rule-label">Identification Required</div>
@@ -704,7 +697,7 @@
             </div>
             <div class="comment-rule">
               <div class="comment-rule-label">Written Proposals</div>
-              <div class="comment-rule-text">File with the City Clerk. Included in a Clerk's agenda report within <strong>21 days</strong> of receipt.</div>
+              <div class="comment-rule-text">File with the City Clerk. Included in a Clerk&#8217;s agenda report within <strong>21 days</strong> of receipt.</div>
             </div>
           </div>
         </div>
@@ -713,45 +706,45 @@
       <!-- Commissioners -->
       <div class="accordion-item" id="acc-commissioners">
         <button class="accordion-trigger" onclick="toggleAccordion('acc-commissioners')">
-          <span class="accordion-pill"><span class="accordion-pill-icon">🏛️</span> Commissioners</span>
-          <span class="accordion-chevron">▼</span>
+          <span class="accordion-pill"><span class="accordion-pill-icon">&#127963;</span> Commissioners</span>
+          <span class="accordion-chevron">&#9660;</span>
         </button>
         <div class="accordion-body">
           <div class="accordion-inner">
             <div class="commissioner-row">
               <div class="commissioner-role">Mayor</div>
               <div class="commissioner-name">David Anderson</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#6c210d15031e2c070d000d010d1603030f05181542031e0b">✉ <span class="__cf_email__" data-cfemail="dc91bda5b3ae9cb7bdb0bdb1bda6b3b3bfb5a8a5f2b3aebb">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:Mayor&#64;kalamazoocity.org">&#9993; Mayor&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Vice Mayor</div>
               <div class="commissioner-name">Drew Duncan</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#dd99a8b3bebcb399909db6bcb1bcb0bca7b2b2beb4a9a4f3b2afba">✉ <span class="__cf_email__" data-cfemail="9adeeff4f9fbf4ded7daf1fbf6fbf7fbe0f5f5f9f3eee3b4f5e8fd">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:DuncanDM&#64;kalamazoocity.org">&#9993; DuncanDM&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Jeanne Hess</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#d098b5a3a39a90bbb1bcb1bdb1aabfbfb3b9a4a9febfa2b7">✉ <span class="__cf_email__" data-cfemail="fab29f8989b0ba919b969b979b80959599938e83d495889d">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:HessJ&#64;kalamazoocity.org">&#9993; HessJ&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Stephanie Hoffman</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#dd95b2bbbbb0bcb38e9db6bcb1bcb0bca7b2b2beb4a9a4f3b2afba">✉ <span class="__cf_email__" data-cfemail="e4ac8b828289858ab7a48f85888589859e8b8b878d909dca8b9683">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:HoffmanS&#64;kalamazoocity.org">&#9993; HoffmanS&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Chris Praedel</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#550527343031303916153e34393438342f3a3a363c212c7b3a2732">✉ <span class="__cf_email__" data-cfemail="3d6d4f5c585958517e7d565c515c505c4752525e54494413524f5a">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:PraedelC&#64;kalamazoocity.org">&#9993; PraedelC&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Jae Slaby</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#12417e73706b58535279737e737f73687d7d717b666b3c7d6075">✉ <span class="__cf_email__" data-cfemail="f7a49b96958ebdb6b79c969b969a968d9898949e838ed9988590">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:SlabyJA&#64;kalamazoocity.org">&#9993; SlabyJA&#64;kalamazoocity.org</a>
             </div>
             <div class="commissioner-row">
               <div class="commissioner-role">Commissioner</div>
               <div class="commissioner-name">Alonzo Wilson</div>
-              <a class="commissioner-email" href="/cdn-cgi/l/email-protection#4017292c332f2e01002b212c212d213a2f2f232934396e2f3227">✉ <span class="__cf_email__" data-cfemail="63340a0f100c0d222308020f020e02190c0c000a171a4d0c1104">[email&#160;protected]</span></a>
+              <a class="commissioner-email" href="mailto:WilsonA&#64;kalamazoocity.org">&#9993; WilsonA&#64;kalamazoocity.org</a>
             </div>
           </div>
         </div>
@@ -771,8 +764,8 @@
 
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const meetings = [
+  <script>
+    var meetings = [
       { year: 2026, month: 3, date: 'March 16, 2026',    type: 'Regular Business Meeting', vid: '2KxazWgFRsI', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876' },
       { year: 2026, month: 3, date: 'March 16, 2026',    type: 'Committee of the Whole',   vid: '0ddn1llgC9k', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877' },
       { year: 2026, month: 3, date: 'March 14, 2026',    type: 'Annual Retreat',            vid: 'IkkKEVJrGj4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2580/files/agenda/4835', minutes: null },
@@ -784,7 +777,7 @@
       { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Committee of the Whole',   vid: 'tq1MxNj6osA', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4682', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4722' },
       { year: 2026, month: 1, date: 'January 26, 2026',  type: 'City Commission Meeting',  vid: 'eSdMoRZE6y4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4669', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4689' },
       { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Regular Business Meeting', vid: 'upL1eEYIMCE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727' },
-      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',   vid: 'SwI5GDHpHNk', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620' },
+      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',   vid: 'SwI5GDHpHNk', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620' }
     ];
 
     function toggleAccordion(id) {
@@ -797,10 +790,12 @@
     }
 
     function renderMeetings() {
-      const year  = parseInt(document.getElementById('year-select').value);
-      const month = document.getElementById('month-select').value;
+      var yearEl  = document.getElementById('year-select');
+      var monthEl = document.getElementById('month-select');
+      var year    = parseInt(yearEl.value);
+      var month   = monthEl.value;
 
-      const filtered = meetings.filter(m => {
+      var filtered = meetings.filter(function(m) {
         if (m.year !== year) return false;
         if (month !== 'all' && m.month !== parseInt(month)) return false;
         return true;
@@ -809,21 +804,44 @@
       document.getElementById('filter-count').textContent =
         filtered.length + ' meeting' + (filtered.length !== 1 ? 's' : '');
 
-      const monthLabel = month === 'all'
+      var monthLabel = month === 'all'
         ? year
-        : document.getElementById('month-select').options[document.getElementById('month-select').selectedIndex].text + ' ' + year;
-      document.getElementById('list-heading').textContent =
-        filtered.length + ' meeting' + (filtered.length !== 1 ? 's' : '') + ' — ' + monthLabel;
+        : monthEl.options[monthEl.selectedIndex].text + ' ' + year;
 
-      const list = document.getElementById('meeting-list');
+      document.getElementById('list-heading').textContent =
+        filtered.length + ' meeting' + (filtered.length !== 1 ? 's' : '') + ' \u2014 ' + monthLabel;
+
+      var list = document.getElementById('meeting-list');
 
       if (filtered.length === 0) {
         list.innerHTML = '<div class="no-results">No meetings found for this period.</div>';
         return;
       }
 
-      list.innerHTML = filtered.map(m => `
-        <div class="meeting-row">
-          <div class="meeting-info">
-            <div class="meeting-date">${m.date}</div>
-            <div c
+      list.innerHTML = filtered.map(function(m) {
+        var agendaPill  = m.agenda  ? '<a class="doc-pill" href="' + m.agenda  + '" target="_blank">\uD83D\uDCC4 Agenda</a>'  : '';
+        var minutesPill = m.minutes ? '<a class="doc-pill" href="' + m.minutes + '" target="_blank">\uD83D\uDCDD Minutes</a>' : '';
+        var recordingPill = '<a class="doc-pill" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">\u25B6 Recording</a>';
+        var noDocs = (!m.agenda && !m.minutes) ? '<span class="doc-none">Documents not yet available</span>' : '';
+        return '<div class="meeting-row">'
+          + '<div class="meeting-info">'
+          + '<div class="meeting-date">' + m.date + '</div>'
+          + '<div class="meeting-type">' + m.type + '</div>'
+          + '<div class="meeting-actions">' + agendaPill + minutesPill + recordingPill + noDocs + '</div>'
+          + '</div>'
+          + '<a class="meeting-thumb" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">'
+          + '<img src="https://img.youtube.com/vi/' + m.vid + '/maxresdefault.jpg" alt="' + m.type + '">'
+          + '<div class="thumb-overlay"></div>'
+          + '<div class="thumb-play"><div class="thumb-play-btn">\u25B6</div></div>'
+          + '</a>'
+          + '</div>';
+      }).join('');
+    }
+
+    var latestMonth = String(Math.max.apply(null, meetings.map(function(m) { return m.month; })));
+    document.getElementById('month-select').value = latestMonth;
+    renderMeetings();
+  </script>
+
+</body>
+</html>
