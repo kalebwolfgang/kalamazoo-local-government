@@ -838,8 +838,7 @@
       }).join('');
     }
 
-    var latestMonth = String(Math.max.apply(null, meetings.map(function(m) { return m.month; })));
-    document.getElementById('month-select').value = latestMonth;
+    document.getElementById('month-select').value = 'all';
     renderMeetings();
   </script>
 
