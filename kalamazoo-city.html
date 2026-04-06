@@ -548,28 +548,30 @@
 
       /* Header */
       header {
-        padding: 14px 16px;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto auto;
-        gap: 10px 12px;
+        padding: 10px 14px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0;
+        align-items: center;
       }
 
       .back {
         font-size: 11px;
-        padding: 7px 12px;
+        padding: 6px 10px;
         grid-row: 1;
         grid-column: 1;
+        justify-self: start;
       }
 
       .header-center {
         grid-row: 1;
         grid-column: 2;
-        text-align: left;
+        text-align: right;
       }
 
-      .header-eyebrow { font-size: 9px; margin-bottom: 2px; }
+      .header-eyebrow { display: none; }
 
-      .header-title { font-size: clamp(18px, 5vw, 26px); }
+      .header-title { font-size: 15px; letter-spacing: -0.02em; }
 
       /* Filter bar */
       .filter-bar {
@@ -631,20 +633,20 @@
         overflow: visible;
       }
 
-      /* Sidebar hidden by default on mobile, shown when toggled */
+      /* Sidebar open by default on mobile */
       .info-sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 2px solid var(--rule);
         overflow-y: visible;
-        max-height: 0;
-        overflow: hidden;
+        max-height: 9999px;
+        overflow: visible;
         transition: max-height 0.35s ease;
         display: block;
       }
-      .info-sidebar.open {
-        max-height: 9999px;
-        overflow-y: visible;
+      .info-sidebar.closed {
+        max-height: 0;
+        overflow: hidden;
       }
 
       /* Accordion pills smaller on mobile */
@@ -669,22 +671,23 @@
       .scroll-area { overflow-y: visible; }
       .list-inner { padding: 0 16px; }
 
-      /* Meeting rows stack vertically on mobile */
+      /* Meeting rows stay horizontal, small thumb, stronger divider */
       .meeting-row {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 14px;
-        padding: 18px 0;
+        padding: 16px 0;
+        border-bottom: 2px solid var(--rule);
       }
 
-      /* Thumbnail goes full width below the info */
       .meeting-thumb {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 8px;
+        width: 110px;
+        max-width: 110px;
+        border-radius: 6px;
+        flex-shrink: 0;
       }
 
-      .meeting-type { font-size: 22px; }
+      .meeting-type { font-size: 17px; margin-bottom: 8px; }
 
       .doc-pill { font-size: 12px; padding: 6px 12px; }
 
@@ -732,7 +735,7 @@
   </div>
 
   <!-- Mobile-only info toggle -->
-  <button class="info-toggle" id="info-toggle" onclick="toggleMobileInfo()">
+  <button class="info-toggle open" id="info-toggle" onclick="toggleMobileInfo()">
     <span class="info-toggle-label">
       <span class="info-toggle-icon">&#9432;</span>
       Commission Info
@@ -932,7 +935,7 @@
     function toggleMobileInfo() {
       var sidebar = document.getElementById('info-sidebar');
       var btn     = document.getElementById('info-toggle');
-      sidebar.classList.toggle('open');
+      sidebar.classList.toggle('closed');
       btn.classList.toggle('open');
     }
 
