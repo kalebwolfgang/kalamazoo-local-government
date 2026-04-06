@@ -107,7 +107,7 @@
       pointer-events: none;
     }
 
-    /* Last row: cell 25 centered in cols 3–5 */
+    /* Last row: cell 25 centered in cols 3-5 */
     .cell-25 { grid-column: 3 / 5; }
 
     /* Empty filler cells */
@@ -268,7 +268,6 @@
       }
 
       .calendar-link-eyebrow { display: none; }
-
       .calendar-link-label { font-size: 18px; }
 
       .cell {
@@ -277,13 +276,9 @@
       }
 
       .cell-25 { grid-column: span 3; }
-
       .cell-empty { display: none; }
 
-      .cell-name {
-        font-size: clamp(26px, 7vw, 40px);
-      }
-
+      .cell-name { font-size: clamp(26px, 7vw, 40px); }
       .cell-arrow { opacity: 0.6; }
     }
   </style>
@@ -298,129 +293,131 @@
     <div class="header-desc" style="padding-left: 32px; font-family: 'Fraunces', serif; font-size: clamp(19px, 2.5vw, 32px); font-weight: 400; font-style: italic; color: #6b5e4e; line-height: 1; align-self: center;">Everything you need,<br>all in one place.</div>
     <a href="calendar.html" class="calendar-link">
       <span class="calendar-link-eyebrow">View the</span>
-      <span class="calendar-link-label">Meeting Calendar →</span>
+      <span class="calendar-link-label">Meeting Calendar &#8594;</span>
     </a>
   </header>
 
   <div class="grid">
 
-    <!-- Row 1 -->
+    <!-- Row 1 — Tier 1 -->
     <a href="kalamazoo-county.html" class="cell c1" data-num="01">
       <div class="cell-top"><span class="cell-num">01</span></div>
-      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>County<br>Commission</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>County<br>Commission</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="kalamazoo-city.html" class="cell c2" data-num="02">
       <div class="cell-top"><span class="cell-num">02</span></div>
-      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>City<br>Commission</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>City<br>Commission</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="portage.html" class="cell c3" data-num="03">
       <div class="cell-top"><span class="cell-num">03</span></div>
-      <div class="cell-bottom"><span class="cell-name">Portage<br>City<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Portage<br>City<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 2 -->
+    <!-- Row 2 — Tier 1 continued -->
     <a href="kalamazoo-township.html" class="cell c4" data-num="04">
       <div class="cell-top"><span class="cell-num">04</span></div>
-      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Kalamazoo<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="parchment.html" class="cell c5" data-num="05">
+    <a href="comstock.html" class="cell c5" data-num="05">
       <div class="cell-top"><span class="cell-num">05</span></div>
-      <div class="cell-bottom"><span class="cell-name">Parchment<br>City<br>Commission</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Comstock<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="comstock.html" class="cell c6" data-num="06">
+    <a href="oshtemo.html" class="cell c6" data-num="06">
       <div class="cell-top"><span class="cell-num">06</span></div>
-      <div class="cell-bottom"><span class="cell-name">Comstock<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Oshtemo<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 3 -->
-    <a href="oshtemo.html" class="cell c7" data-num="07">
+    <!-- Row 3 — Tier 1 continued -->
+    <a href="galesburg.html" class="cell c7" data-num="07">
       <div class="cell-top"><span class="cell-num">07</span></div>
-      <div class="cell-bottom"><span class="cell-name">Oshtemo<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Galesburg<br>City<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="texas-township.html" class="cell c8" data-num="08">
+    <a href="vicksburg.html" class="cell c8" data-num="08">
       <div class="cell-top"><span class="cell-num">08</span></div>
-      <div class="cell-bottom"><span class="cell-name">Texas<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Vicksburg<br>Village<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="galesburg.html" class="cell c9" data-num="09">
+    <a href="texas-township.html" class="cell c9" data-num="09">
       <div class="cell-top"><span class="cell-num">09</span></div>
-      <div class="cell-bottom"><span class="cell-name">Galesburg<br>City<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Texas<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 4 -->
-    <a href="vicksburg.html" class="cell c10" data-num="10">
+    <!-- Row 4 — Tier 2 -->
+    <a href="parchment.html" class="cell c10" data-num="10">
       <div class="cell-top"><span class="cell-num">10</span></div>
-      <div class="cell-bottom"><span class="cell-name">Vicksburg<br>Village<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Parchment<br>City<br>Commission</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="richland-village.html" class="cell c11" data-num="11">
       <div class="cell-top"><span class="cell-num">11</span></div>
-      <div class="cell-bottom"><span class="cell-name">Richland<br>Village<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Richland<br>Village<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="schoolcraft-village.html" class="cell c12" data-num="12">
       <div class="cell-top"><span class="cell-num">12</span></div>
-      <div class="cell-bottom"><span class="cell-name">Schoolcraft<br>Village<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Schoolcraft<br>Village<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 5 -->
-    <a href="richland-township.html" class="cell c13" data-num="13">
+    <!-- Row 5 — Tier 2 continued -->
+    <a href="schoolcraft-township.html" class="cell c13" data-num="13">
       <div class="cell-top"><span class="cell-num">13</span></div>
-      <div class="cell-bottom"><span class="cell-name">Richland<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Schoolcraft<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="ross-township.html" class="cell c14" data-num="14">
+    <a href="richland-township.html" class="cell c14" data-num="14">
       <div class="cell-top"><span class="cell-num">14</span></div>
-      <div class="cell-bottom"><span class="cell-name">Ross<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Richland<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="alamo-township.html" class="cell c15" data-num="15">
+    <a href="ross-township.html" class="cell c15" data-num="15">
       <div class="cell-top"><span class="cell-num">15</span></div>
-      <div class="cell-bottom"><span class="cell-name">Alamo<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Ross<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 6 -->
-    <a href="brady-township.html" class="cell c16" data-num="16">
+    <!-- Row 6 — Tier 2 continued -->
+    <a href="alamo-township.html" class="cell c16" data-num="16">
       <div class="cell-top"><span class="cell-num">16</span></div>
-      <div class="cell-bottom"><span class="cell-name">Brady<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Alamo<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="climax-township.html" class="cell c17" data-num="17">
+    <a href="brady-township.html" class="cell c17" data-num="17">
       <div class="cell-top"><span class="cell-num">17</span></div>
-      <div class="cell-bottom"><span class="cell-name">Climax<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
-    </a>
-    <a href="charleston-township.html" class="cell c18" data-num="18">
-      <div class="cell-top"><span class="cell-num">18</span></div>
-      <div class="cell-bottom"><span class="cell-name">Charleston<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Brady<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 7 -->
-    <a href="schoolcraft-township.html" class="cell c19" data-num="19">
+    <!-- Tier 3 starts at 18 -->
+    <a href="climax-township.html" class="cell c18" data-num="18">
+      <div class="cell-top"><span class="cell-num">18</span></div>
+      <div class="cell-bottom"><span class="cell-name">Climax<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
+    </a>
+
+    <!-- Row 7 — Tier 3 continued -->
+    <a href="charleston-township.html" class="cell c19" data-num="19">
       <div class="cell-top"><span class="cell-num">19</span></div>
-      <div class="cell-bottom"><span class="cell-name">Schoolcraft<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Charleston<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="cooper-township.html" class="cell c20" data-num="20">
       <div class="cell-top"><span class="cell-num">20</span></div>
-      <div class="cell-bottom"><span class="cell-name">Cooper<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Cooper<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <a href="wakeshma-township.html" class="cell c21" data-num="21">
       <div class="cell-top"><span class="cell-num">21</span></div>
-      <div class="cell-bottom"><span class="cell-name">Wakeshma<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Wakeshma<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 8 -->
+    <!-- Row 8 — Tier 3 + Tier 4 -->
     <a href="prairie-ronde-township.html" class="cell c22" data-num="22">
       <div class="cell-top"><span class="cell-num">22</span></div>
-      <div class="cell-bottom"><span class="cell-name">Prairie Ronde<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Prairie Ronde<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="augusta-village.html" class="cell c23" data-num="23">
+    <a href="pavilion-township.html" class="cell c23" data-num="23">
       <div class="cell-top"><span class="cell-num">23</span></div>
-      <div class="cell-bottom"><span class="cell-name">Augusta<br>Village<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Pavilion<br>Township<br>Trustees</span><span class="cell-arrow">&#8599;</span></div>
     </a>
-    <a href="climax-village.html" class="cell c24" data-num="24">
+    <a href="augusta-village.html" class="cell c24" data-num="24">
       <div class="cell-top"><span class="cell-num">24</span></div>
-      <div class="cell-bottom"><span class="cell-name">Climax<br>Village<br>Council</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Augusta<br>Village<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
 
-    <!-- Row 9: empty filler | cell 25 centered | empty filler -->
+    <!-- Row 9: cell 25 centered -->
     <div class="cell-empty" style="grid-column: span 2;"></div>
-    <a href="pavilion-township.html" class="cell c25 cell-25" data-num="25">
+    <a href="climax-village.html" class="cell c25 cell-25" data-num="25">
       <div class="cell-top"><span class="cell-num">25</span></div>
-      <div class="cell-bottom"><span class="cell-name">Pavilion<br>Township<br>Trustees</span><span class="cell-arrow">↗</span></div>
+      <div class="cell-bottom"><span class="cell-name">Climax<br>Village<br>Council</span><span class="cell-arrow">&#8599;</span></div>
     </a>
     <div class="cell-empty" style="grid-column: span 2;"></div>
 
