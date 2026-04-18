@@ -5,12 +5,29 @@
   },
   "meta": {
     "last_updated": "2026-04-18",
-    "source": "Manual entry (pre-scraper)"
+    "source": "CivicClerk scraper"
   },
   "meetings": [
     {
+      "date": "2026-04-06",
+      "type": "Regular Business Meeting",
+      "event_id": 2533,
+      "youtube_id": "lhe0djlxkgc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2533/files/agenda/4922",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2533/files/agenda/4970"
+    },
+    {
+      "date": "2026-04-06",
+      "type": "Committee of the Whole",
+      "event_id": 2545,
+      "youtube_id": "vJjjoeZAH2s",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2545/files/agenda/4928",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2545/files/agenda/4969"
+    },
+    {
       "date": "2026-03-16",
       "type": "Regular Business Meeting",
+      "event_id": 2556,
       "youtube_id": "2KxazWgFRsI",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876"
@@ -18,6 +35,7 @@
     {
       "date": "2026-03-16",
       "type": "Committee of the Whole",
+      "event_id": 2569,
       "youtube_id": "0ddn1llgC9k",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877"
@@ -25,6 +43,7 @@
     {
       "date": "2026-03-14",
       "type": "Annual Retreat",
+      "event_id": 2580,
       "youtube_id": "IkkKEVJrGj4",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2580/files/agenda/4835",
       "minutes_url": null
@@ -32,6 +51,7 @@
     {
       "date": "2026-03-02",
       "type": "Regular Business Meeting",
+      "event_id": 2532,
       "youtube_id": "pp5pCqjcJLE",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4806",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4823"
@@ -39,6 +59,7 @@
     {
       "date": "2026-03-02",
       "type": "Committee of the Whole",
+      "event_id": 2544,
       "youtube_id": "_HzfrsdW5C0",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4819",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4825"
@@ -46,6 +67,7 @@
     {
       "date": "2026-02-16",
       "type": "Regular Business Meeting",
+      "event_id": 2555,
       "youtube_id": "rw9AiPNa12A",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4751",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4771"
@@ -53,6 +75,7 @@
     {
       "date": "2026-02-16",
       "type": "Committee of the Whole",
+      "event_id": 2568,
       "youtube_id": "F6OL4Dl1CvU",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4753",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4772"
@@ -60,6 +83,7 @@
     {
       "date": "2026-02-02",
       "type": "Regular Business Meeting",
+      "event_id": 2531,
       "youtube_id": "8XYsqV-bIlc",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4684",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4692"
@@ -67,13 +91,15 @@
     {
       "date": "2026-02-02",
       "type": "Committee of the Whole",
+      "event_id": 2543,
       "youtube_id": "tq1MxNj6osA",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4682",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4722"
     },
     {
       "date": "2026-01-26",
-      "type": "City Commission Meeting",
+      "type": "Regular Business Meeting",
+      "event_id": 2567,
       "youtube_id": "eSdMoRZE6y4",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4669",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4689"
@@ -81,6 +107,7 @@
     {
       "date": "2026-01-05",
       "type": "Regular Business Meeting",
+      "event_id": 2530,
       "youtube_id": "upL1eEYIMCE",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727"
@@ -88,9 +115,1210 @@
     {
       "date": "2026-01-05",
       "type": "Committee of the Whole",
+      "event_id": 2542,
       "youtube_id": "SwI5GDHpHNk",
       "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605",
       "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620"
+    },
+    {
+      "date": "2025-12-15",
+      "type": "Regular Business Meeting",
+      "event_id": 1284,
+      "youtube_id": "0cJEC-IYZ2M",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1284/files/agenda/4555",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1284/files/agenda/4745"
+    },
+    {
+      "date": "2025-12-15",
+      "type": "Committee of the Whole",
+      "event_id": 1308,
+      "youtube_id": "wyD7_IUUtbQ",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1308/files/agenda/4552",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1308/files/agenda/4724"
+    },
+    {
+      "date": "2025-12-08",
+      "type": "City Commission Budget Work Session",
+      "event_id": 2554,
+      "youtube_id": "dVa3BKW55Q4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2554/files/agenda/4525",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2554/files/agenda/4723"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "Regular Business Meeting",
+      "event_id": 1272,
+      "youtube_id": "ignrwCYOUdE",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1272/files/agenda/4493",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1272/files/agenda/4607"
+    },
+    {
+      "date": "2025-12-01",
+      "type": "Committee of the Whole",
+      "event_id": 1296,
+      "youtube_id": "9WxH9oBCHTQ",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1296/files/agenda/4489",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1296/files/agenda/4612"
+    },
+    {
+      "date": "2025-11-17",
+      "type": "Regular Business Meeting",
+      "event_id": 1311,
+      "youtube_id": "YYPJG-u17po",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1311/files/agenda/4439",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1311/files/agenda/4611"
+    },
+    {
+      "date": "2025-11-17",
+      "type": "Regular Business Meeting",
+      "event_id": 1283,
+      "youtube_id": "YwIuYEeYNdM",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1283/files/agenda/4435",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1283/files/agenda/4610"
+    },
+    {
+      "date": "2025-10-30",
+      "type": "Regular Business Meeting",
+      "event_id": 2526,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2526/files/agenda/4404",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2526/files/agenda/4411"
+    },
+    {
+      "date": "2025-10-20",
+      "type": "Regular Business Meeting",
+      "event_id": 1282,
+      "youtube_id": "6Us9dwCFNV4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1282/files/agenda/4388",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1282/files/agenda/4398"
+    },
+    {
+      "date": "2025-10-20",
+      "type": "Committee of the Whole",
+      "event_id": 1306,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1306/files/agenda/4382",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1306/files/agenda/4401"
+    },
+    {
+      "date": "2025-10-15",
+      "type": "Committee of the Whole",
+      "event_id": 2524,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2524/files/agenda/4349",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2524/files/agenda/4400"
+    },
+    {
+      "date": "2025-10-06",
+      "type": "Regular Business Meeting",
+      "event_id": 1270,
+      "youtube_id": "DyZj8KaXRss",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1270/files/agenda/4320",
+      "minutes_url": null
+    },
+    {
+      "date": "2025-10-06",
+      "type": "Committee of the Whole",
+      "event_id": 1294,
+      "youtube_id": "lOXRmmCeIV4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1294/files/agenda/4344",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1294/files/agenda/4399"
+    },
+    {
+      "date": "2025-09-15",
+      "type": "Regular Business Meeting",
+      "event_id": 1281,
+      "youtube_id": "Qb7GzLCTows",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1281/files/agenda/4260",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1281/files/agenda/4304"
+    },
+    {
+      "date": "2025-09-15",
+      "type": "Committee of the Whole",
+      "event_id": 1305,
+      "youtube_id": "Z2Ym1ynv85w",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1305/files/agenda/4263",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1305/files/agenda/4302"
+    },
+    {
+      "date": "2025-09-02",
+      "type": "Regular Business Meeting",
+      "event_id": 1269,
+      "youtube_id": "984AnQD7-wc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1269/files/agenda/4218",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1269/files/agenda/4239"
+    },
+    {
+      "date": "2025-09-02",
+      "type": "Committee of the Whole",
+      "event_id": 1293,
+      "youtube_id": null,
+      "agenda_url": null,
+      "minutes_url": null
+    },
+    {
+      "date": "2025-08-18",
+      "type": "Regular Business Meeting",
+      "event_id": 1280,
+      "youtube_id": "-BZkERuA2Jw",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1280/files/agenda/4160",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1280/files/agenda/4215"
+    },
+    {
+      "date": "2025-08-18",
+      "type": "Committee of the Whole",
+      "event_id": 1304,
+      "youtube_id": "1EHVXcDkTxs",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1304/files/agenda/4164",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1304/files/agenda/4216"
+    },
+    {
+      "date": "2025-08-11",
+      "type": "Committee of the Whole",
+      "event_id": 2518,
+      "youtube_id": "DHqsq2fUS2E",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2518/files/agenda/4137",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2518/files/agenda/4167"
+    },
+    {
+      "date": "2025-08-04",
+      "type": "Regular Business Meeting",
+      "event_id": 1268,
+      "youtube_id": "bHnijd9uq10",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1268/files/agenda/4120",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1268/files/agenda/4124"
+    },
+    {
+      "date": "2025-08-04",
+      "type": "Committee of the Whole",
+      "event_id": 1292,
+      "youtube_id": "vAodri1DH2Y",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1292/files/agenda/4118",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1292/files/agenda/4127"
+    },
+    {
+      "date": "2025-07-21",
+      "type": "Regular Business Meeting",
+      "event_id": 1279,
+      "youtube_id": "vtiEgu-6El4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1279/files/agenda/4080",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1279/files/agenda/4104"
+    },
+    {
+      "date": "2025-07-21",
+      "type": "Committee of the Whole",
+      "event_id": 1303,
+      "youtube_id": null,
+      "agenda_url": null,
+      "minutes_url": null
+    },
+    {
+      "date": "2025-07-07",
+      "type": "Regular Business Meeting",
+      "event_id": 1267,
+      "youtube_id": "bX8kb2jZhjU",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1267/files/agenda/4053",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1267/files/agenda/4060"
+    },
+    {
+      "date": "2025-07-07",
+      "type": "Committee of the Whole",
+      "event_id": 1291,
+      "youtube_id": "cahb2upZ1Ac",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1291/files/agenda/4055",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1291/files/agenda/4061"
+    },
+    {
+      "date": "2025-06-23",
+      "type": "Regular Business Meeting",
+      "event_id": 2517,
+      "youtube_id": "VlYrHmvXi-g",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2517/files/agenda/3993",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2517/files/agenda/4033"
+    },
+    {
+      "date": "2025-06-16",
+      "type": "Regular Business Meeting",
+      "event_id": 1278,
+      "youtube_id": "VWM1p2qOCC0",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1278/files/agenda/3965",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1278/files/agenda/4037"
+    },
+    {
+      "date": "2025-06-16",
+      "type": "Committee of the Whole",
+      "event_id": 1302,
+      "youtube_id": "5daLfjBohII",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1302/files/agenda/3971",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1302/files/agenda/4030"
+    },
+    {
+      "date": "2025-06-02",
+      "type": "Regular Business Meeting",
+      "event_id": 1266,
+      "youtube_id": "19p6pO-DeUc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1266/files/agenda/3940",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1266/files/agenda/4045"
+    },
+    {
+      "date": "2025-06-02",
+      "type": "Committee of the Whole",
+      "event_id": 1290,
+      "youtube_id": "EjAT7snUeK8",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1290/files/agenda/3946",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1290/files/agenda/4029"
+    },
+    {
+      "date": "2025-05-19",
+      "type": "Regular Business Meeting",
+      "event_id": 1277,
+      "youtube_id": "_NlPuse82pI",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1277/files/agenda/3899",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1277/files/agenda/4044"
+    },
+    {
+      "date": "2025-05-19",
+      "type": "Committee of the Whole",
+      "event_id": 1301,
+      "youtube_id": "cCbJ1oRT4iM",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1301/files/agenda/3902",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1301/files/agenda/4028"
+    },
+    {
+      "date": "2025-05-12",
+      "type": "Regular Business Meeting",
+      "event_id": 1265,
+      "youtube_id": "XCB9ZIFV4_U",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1265/files/agenda/3878",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1265/files/agenda/4057"
+    },
+    {
+      "date": "2025-05-12",
+      "type": "Committee of the Whole",
+      "event_id": 1289,
+      "youtube_id": "OQUyF8UB9Hk",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1289/files/agenda/3880",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1289/files/agenda/4027"
+    },
+    {
+      "date": "2025-04-21",
+      "type": "Regular Business Meeting",
+      "event_id": 1276,
+      "youtube_id": "sd73NSxb99o",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1276/files/agenda/3849",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1276/files/agenda/4079"
+    },
+    {
+      "date": "2025-04-21",
+      "type": "Committee of the Whole",
+      "event_id": 1300,
+      "youtube_id": "amkiofFf2m8",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1300/files/agenda/3843",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1300/files/agenda/4078"
+    },
+    {
+      "date": "2025-04-07",
+      "type": "Regular Business Meeting",
+      "event_id": 1264,
+      "youtube_id": "7eE1cwb1Weo",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1264/files/agenda/3810",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1264/files/agenda/4077"
+    },
+    {
+      "date": "2025-04-07",
+      "type": "Committee of the Whole",
+      "event_id": 1288,
+      "youtube_id": "ECzThP25dTc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1288/files/agenda/3808",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1288/files/agenda/4026"
+    },
+    {
+      "date": "2025-03-31",
+      "type": "Regular Business Meeting",
+      "event_id": 2509,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2509/files/agenda/3787",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2509/files/agenda/3803"
+    },
+    {
+      "date": "2025-03-17",
+      "type": "Regular Business Meeting",
+      "event_id": 1275,
+      "youtube_id": "h7y5lAgnWjc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1275/files/agenda/3713",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1275/files/agenda/3758"
+    },
+    {
+      "date": "2025-03-17",
+      "type": "Committee of the Whole",
+      "event_id": 1299,
+      "youtube_id": "PRH3tkXh23Q",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1299/files/agenda/3701",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1299/files/agenda/4034"
+    },
+    {
+      "date": "2025-03-08",
+      "type": "Annual Retreat",
+      "event_id": 1310,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1310/files/agenda/3687",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1310/files/agenda/4046"
+    },
+    {
+      "date": "2025-03-03",
+      "type": "Regular Business Meeting",
+      "event_id": 1263,
+      "youtube_id": "LEY0J3mSRWc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1263/files/agenda/3671",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1263/files/agenda/3757"
+    },
+    {
+      "date": "2025-03-03",
+      "type": "Committee of the Whole",
+      "event_id": 1287,
+      "youtube_id": "fAvHm8Liyxg",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1287/files/agenda/3673",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1287/files/agenda/4025"
+    },
+    {
+      "date": "2025-02-17",
+      "type": "Regular Business Meeting",
+      "event_id": 1274,
+      "youtube_id": "SfiBkKzbwNc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1274/files/agenda/3605",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1274/files/agenda/4076"
+    },
+    {
+      "date": "2025-02-17",
+      "type": "Committee of the Whole",
+      "event_id": 1298,
+      "youtube_id": "tBej4wc-kRA",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1298/files/agenda/3601",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1298/files/agenda/4024"
+    },
+    {
+      "date": "2025-02-03",
+      "type": "Regular Business Meeting",
+      "event_id": 1262,
+      "youtube_id": "2sRrUbWxPfE",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1262/files/agenda/3560",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1262/files/agenda/3813"
+    },
+    {
+      "date": "2025-02-03",
+      "type": "Committee of the Whole",
+      "event_id": 1286,
+      "youtube_id": "ovpp34KyOWs",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1286/files/agenda/3562",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1286/files/agenda/4023"
+    },
+    {
+      "date": "2025-01-27",
+      "type": "Regular Business Meeting",
+      "event_id": 1260,
+      "youtube_id": "jTBZ1Gg0Ifk",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1260/files/agenda/3545",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1260/files/agenda/3805"
+    },
+    {
+      "date": "2025-01-27",
+      "type": "Committee of the Whole",
+      "event_id": 1261,
+      "youtube_id": "gjdcEdYI7EY",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1261/files/agenda/3541",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1261/files/agenda/4022"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "Regular Business Meeting",
+      "event_id": 1258,
+      "youtube_id": "0JBsgNHzST0",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1258/files/agenda/3507",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1258/files/agenda/3759"
+    },
+    {
+      "date": "2025-01-06",
+      "type": "Committee of the Whole",
+      "event_id": 1259,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1259/files/agenda/3505",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1259/files/agenda/3760"
+    },
+    {
+      "date": "2024-12-16",
+      "type": "Regular Business Meeting",
+      "event_id": 923,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/923/files/agenda/3449",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/923/files/agenda/3747"
+    },
+    {
+      "date": "2024-12-16",
+      "type": "Committee of the Whole",
+      "event_id": 1037,
+      "youtube_id": null,
+      "agenda_url": null,
+      "minutes_url": null
+    },
+    {
+      "date": "2024-12-09",
+      "type": "City Commission Budget Work Session",
+      "event_id": 1312,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1312/files/agenda/3417",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-12-02",
+      "type": "Regular Business Meeting",
+      "event_id": 899,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/899/files/agenda/3388",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/899/files/agenda/3470"
+    },
+    {
+      "date": "2024-12-02",
+      "type": "Committee of the Whole",
+      "event_id": 1025,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1025/files/agenda/3394",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-11-18",
+      "type": "Regular Business Meeting",
+      "event_id": 922,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/922/files/agenda/3355",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/922/files/agenda/3464"
+    },
+    {
+      "date": "2024-11-18",
+      "type": "Committee of the Whole",
+      "event_id": 1036,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1036/files/agenda/3351",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-11-12",
+      "type": "Regular Business Meeting",
+      "event_id": 898,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/898/files/agenda/3318",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/898/files/agenda/3364"
+    },
+    {
+      "date": "2024-11-12",
+      "type": "Committee of the Whole",
+      "event_id": 1024,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1024/files/agenda/3314",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-10-21",
+      "type": "Regular Business Meeting",
+      "event_id": 921,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/921/files/agenda/3281",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/921/files/agenda/3468"
+    },
+    {
+      "date": "2024-10-21",
+      "type": "Committee of the Whole",
+      "event_id": 1035,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1035/files/agenda/3277",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-10-07",
+      "type": "Regular Business Meeting",
+      "event_id": 897,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/897/files/agenda/3205",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/897/files/agenda/3469"
+    },
+    {
+      "date": "2024-10-07",
+      "type": "Committee of the Whole",
+      "event_id": 1023,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1023/files/agenda/3210",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-09-16",
+      "type": "Regular Business Meeting",
+      "event_id": 920,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/920/files/agenda/3134",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/920/files/agenda/3467"
+    },
+    {
+      "date": "2024-09-16",
+      "type": "Committee of the Whole",
+      "event_id": 1034,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1034/files/agenda/3136",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-09-03",
+      "type": "Regular Business Meeting",
+      "event_id": 908,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/908/files/agenda/3124",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/908/files/agenda/3466"
+    },
+    {
+      "date": "2024-09-03",
+      "type": "Committee of the Whole",
+      "event_id": 1022,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1022/files/agenda/3120",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-08-19",
+      "type": "Regular Business Meeting",
+      "event_id": 919,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/919/files/agenda/3087",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/919/files/agenda/3102"
+    },
+    {
+      "date": "2024-08-19",
+      "type": "Committee of the Whole",
+      "event_id": 1033,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1033/files/agenda/3091",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-08-12",
+      "type": "Regular Business Meeting",
+      "event_id": 907,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/907/files/agenda/3057",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/907/files/agenda/3103"
+    },
+    {
+      "date": "2024-08-12",
+      "type": "Committee of the Whole",
+      "event_id": 1021,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1021/files/agenda/3059",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1021/files/agenda/3065"
+    },
+    {
+      "date": "2024-07-15",
+      "type": "Regular Business Meeting",
+      "event_id": 918,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/918/files/agenda/3005",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/918/files/agenda/3040"
+    },
+    {
+      "date": "2024-07-15",
+      "type": "Committee of the Whole",
+      "event_id": 1032,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1032/files/agenda/3003",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-07-01",
+      "type": "Regular Business Meeting",
+      "event_id": 906,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/906/files/agenda/2975",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/906/files/agenda/3038"
+    },
+    {
+      "date": "2024-07-01",
+      "type": "Committee of the Whole",
+      "event_id": 1020,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1020/files/agenda/2973",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-06-17",
+      "type": "Regular Business Meeting",
+      "event_id": 917,
+      "youtube_id": "Y_UWVM83JlM",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/917/files/agenda/2945",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/917/files/agenda/2979"
+    },
+    {
+      "date": "2024-06-17",
+      "type": "Committee of the Whole",
+      "event_id": 1031,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1031/files/agenda/2918",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1031/files/agenda/3023"
+    },
+    {
+      "date": "2024-06-03",
+      "type": "Regular Business Meeting",
+      "event_id": 905,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/905/files/agenda/2901",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/905/files/agenda/2910"
+    },
+    {
+      "date": "2024-06-03",
+      "type": "Committee of the Whole",
+      "event_id": 1019,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1019/files/agenda/2896",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-05-20",
+      "type": "Regular Business Meeting",
+      "event_id": 916,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/916/files/agenda/2876",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/916/files/agenda/3756"
+    },
+    {
+      "date": "2024-05-13",
+      "type": "Regular Business Meeting",
+      "event_id": 904,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/904/files/agenda/2840",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/904/files/agenda/3755"
+    },
+    {
+      "date": "2024-05-13",
+      "type": "Committee of the Whole",
+      "event_id": 1018,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1018/files/agenda/2837",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-04-15",
+      "type": "Regular Business Meeting",
+      "event_id": 915,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/915/files/agenda/2789",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/915/files/agenda/3754"
+    },
+    {
+      "date": "2024-04-15",
+      "type": "Committee of the Whole",
+      "event_id": 1029,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1029/files/agenda/2779",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-04-01",
+      "type": "Regular Business Meeting",
+      "event_id": 903,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/903/files/agenda/2758",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/903/files/agenda/3875"
+    },
+    {
+      "date": "2024-04-01",
+      "type": "Committee of the Whole",
+      "event_id": 1017,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1017/files/agenda/2746",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-03-18",
+      "type": "Regular Business Meeting",
+      "event_id": 914,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/914/files/agenda/2706",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/914/files/agenda/3753"
+    },
+    {
+      "date": "2024-03-18",
+      "type": "Committee of the Whole",
+      "event_id": 1028,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1028/files/agenda/2708",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-03-04",
+      "type": "Regular Business Meeting",
+      "event_id": 902,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/902/files/agenda/2673",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/902/files/agenda/3752"
+    },
+    {
+      "date": "2024-03-04",
+      "type": "Committee of the Whole",
+      "event_id": 1016,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1016/files/agenda/2668",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-02-19",
+      "type": "Regular Business Meeting",
+      "event_id": 913,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/913/files/agenda/2616",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/913/files/agenda/3751"
+    },
+    {
+      "date": "2024-02-19",
+      "type": "Committee of the Whole",
+      "event_id": 1027,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1027/files/agenda/2610",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-02-17",
+      "type": "Annual Retreat",
+      "event_id": 978,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/978/files/agenda/2606",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/978/files/agenda/2696"
+    },
+    {
+      "date": "2024-02-05",
+      "type": "Regular Business Meeting",
+      "event_id": 901,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/901/files/agenda/2580",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/901/files/agenda/3750"
+    },
+    {
+      "date": "2024-02-05",
+      "type": "Committee of the Whole",
+      "event_id": 1015,
+      "youtube_id": "ZWBmh2LR-Y8",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1015/files/agenda/2577",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-01-22",
+      "type": "Regular Business Meeting",
+      "event_id": 912,
+      "youtube_id": "Ljey1qDCYzI",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/912/files/agenda/2558",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/912/files/agenda/2574"
+    },
+    {
+      "date": "2024-01-22",
+      "type": "Committee of the Whole",
+      "event_id": 1040,
+      "youtube_id": "BtNOGxd9nvY",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1040/files/agenda/2550",
+      "minutes_url": null
+    },
+    {
+      "date": "2024-01-02",
+      "type": "Regular Business Meeting",
+      "event_id": 888,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/888/files/agenda/2500",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/888/files/agenda/3746"
+    },
+    {
+      "date": "2024-01-02",
+      "type": "Committee of the Whole",
+      "event_id": 1039,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/1039/files/agenda/2496",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/1039/files/agenda/3326"
+    },
+    {
+      "date": "2023-12-18",
+      "type": "Regular Business Meeting",
+      "event_id": 699,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/699/files/agenda/2479",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/699/files/agenda/3215"
+    },
+    {
+      "date": "2023-12-18",
+      "type": "Committee of the Whole",
+      "event_id": 760,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/760/files/agenda/2483",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/760/files/agenda/3217"
+    },
+    {
+      "date": "2023-12-11",
+      "type": "Committee of the Whole",
+      "event_id": 887,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/887/files/agenda/2427",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/887/files/agenda/3216"
+    },
+    {
+      "date": "2023-12-04",
+      "type": "Regular Business Meeting",
+      "event_id": 687,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/687/files/agenda/2401",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/687/files/agenda/3214"
+    },
+    {
+      "date": "2023-12-04",
+      "type": "Committee of the Whole",
+      "event_id": 748,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/748/files/agenda/2403",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/748/files/agenda/3174"
+    },
+    {
+      "date": "2023-11-20",
+      "type": "Regular Business Meeting",
+      "event_id": 698,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/698/files/agenda/2390",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/698/files/agenda/2400"
+    },
+    {
+      "date": "2023-11-20",
+      "type": "Regular Business Meeting",
+      "event_id": 686,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/686/files/agenda/2387",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/686/files/agenda/2399"
+    },
+    {
+      "date": "2023-10-16",
+      "type": "Regular Business Meeting",
+      "event_id": 697,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/697/files/agenda/2309",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/697/files/agenda/2389"
+    },
+    {
+      "date": "2023-10-16",
+      "type": "Committee of the Whole",
+      "event_id": 758,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/758/files/agenda/2307",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/758/files/agenda/2344"
+    },
+    {
+      "date": "2023-10-02",
+      "type": "Regular Business Meeting",
+      "event_id": 685,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/685/files/agenda/2269",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/685/files/agenda/2365"
+    },
+    {
+      "date": "2023-10-02",
+      "type": "Committee of the Whole",
+      "event_id": 746,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/746/files/agenda/2267",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/746/files/agenda/2346"
+    },
+    {
+      "date": "2023-09-18",
+      "type": "Regular Business Meeting",
+      "event_id": 696,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/696/files/agenda/2240",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/696/files/agenda/2352"
+    },
+    {
+      "date": "2023-09-18",
+      "type": "Committee of the Whole",
+      "event_id": 757,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/757/files/agenda/2242",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/757/files/agenda/2348"
+    },
+    {
+      "date": "2023-09-05",
+      "type": "Regular Business Meeting",
+      "event_id": 684,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/684/files/agenda/2196",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/684/files/agenda/2351"
+    },
+    {
+      "date": "2023-09-05",
+      "type": "Committee of the Whole",
+      "event_id": 745,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/745/files/agenda/2202",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/745/files/agenda/2347"
+    },
+    {
+      "date": "2023-08-21",
+      "type": "Regular Business Meeting",
+      "event_id": 695,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/695/files/agenda/2174",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/695/files/agenda/2359"
+    },
+    {
+      "date": "2023-08-21",
+      "type": "Committee of the Whole",
+      "event_id": 756,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/756/files/agenda/2159",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/756/files/agenda/2333"
+    },
+    {
+      "date": "2023-08-07",
+      "type": "Regular Business Meeting",
+      "event_id": 683,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/683/files/agenda/2133",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/683/files/agenda/2360"
+    },
+    {
+      "date": "2023-08-07",
+      "type": "Committee of the Whole",
+      "event_id": 744,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/744/files/agenda/2131",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/744/files/agenda/2330"
+    },
+    {
+      "date": "2023-07-17",
+      "type": "Regular Business Meeting",
+      "event_id": 694,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/694/files/agenda/2087",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/694/files/agenda/2349"
+    },
+    {
+      "date": "2023-07-17",
+      "type": "Committee of the Whole",
+      "event_id": 755,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/755/files/agenda/2084",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/755/files/agenda/2329"
+    },
+    {
+      "date": "2023-07-05",
+      "type": "Regular Business Meeting",
+      "event_id": 682,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/682/files/agenda/2065",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/682/files/agenda/2328"
+    },
+    {
+      "date": "2023-06-20",
+      "type": "Regular Business Meeting",
+      "event_id": 693,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/693/files/agenda/2059",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/693/files/agenda/2295"
+    },
+    {
+      "date": "2023-06-20",
+      "type": "Committee of the Whole",
+      "event_id": 754,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/754/files/agenda/2050",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/754/files/agenda/2327"
+    },
+    {
+      "date": "2023-06-05",
+      "type": "Regular Business Meeting",
+      "event_id": 681,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/681/files/agenda/2016",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/681/files/agenda/2361"
+    },
+    {
+      "date": "2023-06-05",
+      "type": "Committee of the Whole",
+      "event_id": 742,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/742/files/agenda/2006",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/742/files/agenda/2029"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "Regular Business Meeting",
+      "event_id": 692,
+      "youtube_id": "KJvXR8Dagqo",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/692/files/agenda/1984",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/692/files/agenda/1999"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "Committee of the Whole",
+      "event_id": 753,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/753/files/agenda/1978",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/753/files/agenda/2008"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "Regular Business Meeting",
+      "event_id": 680,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/680/files/agenda/1955",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/680/files/agenda/1966"
+    },
+    {
+      "date": "2023-05-01",
+      "type": "Committee of the Whole",
+      "event_id": 741,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/741/files/agenda/1957",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/741/files/agenda/1969"
+    },
+    {
+      "date": "2023-04-17",
+      "type": "Regular Business Meeting",
+      "event_id": 691,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/691/files/agenda/1913",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/691/files/agenda/1974"
+    },
+    {
+      "date": "2023-04-17",
+      "type": "Committee of the Whole",
+      "event_id": 752,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/752/files/agenda/1907",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/752/files/agenda/1962"
+    },
+    {
+      "date": "2023-04-03",
+      "type": "Regular Business Meeting",
+      "event_id": 679,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/679/files/agenda/1865",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/679/files/agenda/1919"
+    },
+    {
+      "date": "2023-04-03",
+      "type": "Committee of the Whole",
+      "event_id": 740,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/740/files/agenda/1858",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/740/files/agenda/1970"
+    },
+    {
+      "date": "2023-03-23",
+      "type": "Special City Commission Meeting - City Attorney Interviews",
+      "event_id": 874,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/874/files/agenda/1840",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/874/files/agenda/1994"
+    },
+    {
+      "date": "2023-03-20",
+      "type": "Regular Business Meeting",
+      "event_id": 690,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/690/files/agenda/1816",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/690/files/agenda/1867"
+    },
+    {
+      "date": "2023-03-20",
+      "type": "Committee of the Whole",
+      "event_id": 751,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/751/files/agenda/1818",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/751/files/agenda/1975"
+    },
+    {
+      "date": "2023-03-06",
+      "type": "Regular Business Meeting",
+      "event_id": 678,
+      "youtube_id": "at65Vxk0eZg",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/678/files/agenda/1780",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/678/files/agenda/2316"
+    },
+    {
+      "date": "2023-03-06",
+      "type": "Committee of the Whole",
+      "event_id": 739,
+      "youtube_id": "FkZCvjyVQ-c",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/739/files/agenda/1782",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/739/files/agenda/2012"
+    },
+    {
+      "date": "2023-02-20",
+      "type": "Regular Business Meeting",
+      "event_id": 689,
+      "youtube_id": "jqx3L4adv8Q",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/689/files/agenda/1755",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/689/files/agenda/1829"
+    },
+    {
+      "date": "2023-02-20",
+      "type": "Committee of the Whole",
+      "event_id": 750,
+      "youtube_id": "ygG8wadIem8",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/750/files/agenda/1741",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/750/files/agenda/2013"
+    },
+    {
+      "date": "2023-02-18",
+      "type": "Annual Retreat",
+      "event_id": 872,
+      "youtube_id": null,
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/872/files/agenda/1739",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/872/files/agenda/2292"
+    },
+    {
+      "date": "2023-02-06",
+      "type": "Regular Business Meeting",
+      "event_id": 677,
+      "youtube_id": "x_hPoXLHIkA",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/677/files/agenda/1721",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/677/files/agenda/2300"
+    },
+    {
+      "date": "2023-02-06",
+      "type": "Committee of the Whole",
+      "event_id": 738,
+      "youtube_id": "2Hn9ep6TaCE",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/738/files/agenda/1714",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/738/files/agenda/2317"
+    },
+    {
+      "date": "2023-01-17",
+      "type": "Regular Business Meeting",
+      "event_id": 688,
+      "youtube_id": "jXDstC-ZHbo",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/688/files/agenda/1691",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/688/files/agenda/2294"
+    },
+    {
+      "date": "2023-01-17",
+      "type": "Committee of the Whole",
+      "event_id": 749,
+      "youtube_id": "5Jvw1jzzSzk",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/749/files/agenda/1669",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/749/files/agenda/2306"
+    },
+    {
+      "date": "2023-01-03",
+      "type": "Regular Business Meeting",
+      "event_id": 676,
+      "youtube_id": "1VyIc0dG7oM",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/676/files/agenda/1659",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/676/files/agenda/2293"
+    },
+    {
+      "date": "2023-01-03",
+      "type": "Committee of the Whole",
+      "event_id": 737,
+      "youtube_id": null,
+      "agenda_url": null,
+      "minutes_url": null
     }
   ]
 }
