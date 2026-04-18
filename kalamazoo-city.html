@@ -530,6 +530,32 @@
       background: var(--accent);
     }
 
+    /* Empty-state thumbnail: shown when a meeting has no video recording */
+    .meeting-thumb-empty {
+      position: relative;
+      width: clamp(180px, 18vw, 240px);
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      background: rgba(122, 106, 85, 0.08);
+      border: 1.5px dashed var(--rule);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .no-recording-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+      opacity: 0.8;
+    }
+
     .no-results {
       padding: 60px 0;
       font-family: 'Fraunces', serif;
@@ -685,6 +711,17 @@
         max-width: 110px;
         border-radius: 6px;
         flex-shrink: 0;
+      }
+
+      .meeting-thumb-empty {
+        width: 110px;
+        max-width: 110px;
+        border-radius: 6px;
+        padding: 6px;
+      }
+      .no-recording-label {
+        font-size: 9px;
+        letter-spacing: 0.05em;
       }
 
       .meeting-type { font-size: 17px; margin-bottom: 8px; }
@@ -1042,21 +1079,33 @@
       }
 
       list.innerHTML = filtered.map(function(m) {
+        var hasVideo = !!m.vid;
+
         var agendaPill    = m.agenda  ? '<a class="doc-pill" href="' + m.agenda  + '" target="_blank">\uD83D\uDCC4 Agenda</a>'  : '';
         var minutesPill   = m.minutes ? '<a class="doc-pill" href="' + m.minutes + '" target="_blank">\uD83D\uDCDD Minutes</a>' : '';
-        var recordingPill = '<a class="doc-pill" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">\u25B6 Recording</a>';
-        var noDocs        = (!m.agenda && !m.minutes) ? '<span class="doc-none">Documents not yet available</span>' : '';
+        var recordingPill = hasVideo  ? '<a class="doc-pill" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">\u25B6 Recording</a>' : '';
+        var noDocs        = (!m.agenda && !m.minutes && !hasVideo) ? '<span class="doc-none">Documents not yet available</span>' : '';
+
+        var thumbnailHtml;
+        if (hasVideo) {
+          thumbnailHtml = '<a class="meeting-thumb" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">'
+            + '<img src="https://img.youtube.com/vi/' + m.vid + '/maxresdefault.jpg" alt="' + m.type + '">'
+            + '<div class="thumb-overlay"></div>'
+            + '<div class="thumb-play"><div class="thumb-play-btn">\u25B6</div></div>'
+            + '</a>';
+        } else {
+          thumbnailHtml = '<div class="meeting-thumb-empty">'
+            + '<div class="no-recording-label">No recording<br>available</div>'
+            + '</div>';
+        }
+
         return '<div class="meeting-row">'
           + '<div class="meeting-info">'
           + '<div class="meeting-date">' + m.date + '</div>'
           + '<div class="meeting-type">' + m.type + '</div>'
           + '<div class="meeting-actions">' + agendaPill + minutesPill + recordingPill + noDocs + '</div>'
           + '</div>'
-          + '<a class="meeting-thumb" href="https://www.youtube.com/watch?v=' + m.vid + '" target="_blank">'
-          + '<img src="https://img.youtube.com/vi/' + m.vid + '/maxresdefault.jpg" alt="' + m.type + '">'
-          + '<div class="thumb-overlay"></div>'
-          + '<div class="thumb-play"><div class="thumb-play-btn">\u25B6</div></div>'
-          + '</a>'
+          + thumbnailHtml
           + '</div>';
       }).join('');
     }
