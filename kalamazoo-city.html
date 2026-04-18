@@ -913,19 +913,15 @@
   </div>
 
   <script>
-    var meetings = [
-      { year: 2026, month: 3, date: 'March 16, 2026',    type: 'Regular Business Meeting', vid: '2KxazWgFRsI', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876' },
-      { year: 2026, month: 3, date: 'March 16, 2026',    type: 'Committee of the Whole',   vid: '0ddn1llgC9k', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877' },
-      { year: 2026, month: 3, date: 'March 14, 2026',    type: 'Annual Retreat',            vid: 'IkkKEVJrGj4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2580/files/agenda/4835', minutes: null },
-      { year: 2026, month: 3, date: 'March 2, 2026',     type: 'Regular Business Meeting', vid: 'pp5pCqjcJLE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4806', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4823' },
-      { year: 2026, month: 3, date: 'March 2, 2026',     type: 'Committee of the Whole',   vid: '_HzfrsdW5C0', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4819', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4825' },
-      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Regular Business Meeting', vid: 'rw9AiPNa12A', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4751', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4771' },
-      { year: 2026, month: 2, date: 'February 16, 2026', type: 'Committee of the Whole',   vid: 'F6OL4Dl1CvU', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4753', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4772' },
-      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Regular Business Meeting', vid: '8XYsqV-bIlc', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4684', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4692' },
-      { year: 2026, month: 2, date: 'February 2, 2026',  type: 'Committee of the Whole',   vid: 'tq1MxNj6osA', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4682', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4722' },
-      { year: 2026, month: 1, date: 'January 26, 2026',  type: 'City Commission Meeting',  vid: 'eSdMoRZE6y4', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4669', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4689' },
-      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Regular Business Meeting', vid: 'upL1eEYIMCE', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727' },
-      { year: 2026, month: 1, date: 'January 5, 2026',   type: 'Committee of the Whole',   vid: 'SwI5GDHpHNk', agenda: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605', minutes: 'https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620' }
+    // Path to the board's data file. When we add other boards, each will have
+    // its own JSON file following this pattern: data/{slug}.json
+    var DATA_URL = 'data/kalamazoo-city.json';
+
+    var meetings = [];  // Populated by loadMeetings()
+
+    var MONTH_NAMES = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
     function toggleAccordion(id) {
@@ -937,6 +933,78 @@
       var btn     = document.getElementById('info-toggle');
       sidebar.classList.toggle('closed');
       btn.classList.toggle('open');
+    }
+
+    // Parse an ISO date string (YYYY-MM-DD) into a Date, avoiding UTC offset
+    // bugs that can shift the day by one when using new Date(isoString).
+    function parseIsoDate(iso) {
+      var parts = iso.split('-');
+      return new Date(
+        parseInt(parts[0], 10),
+        parseInt(parts[1], 10) - 1,
+        parseInt(parts[2], 10)
+      );
+    }
+
+    function formatDisplayDate(iso) {
+      var d = parseIsoDate(iso);
+      return MONTH_NAMES[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    }
+
+    // Transform JSON records into the shape the renderer expects.
+    function normalizeMeeting(m) {
+      var d = parseIsoDate(m.date);
+      return {
+        year:    d.getFullYear(),
+        month:   d.getMonth() + 1,
+        date:    formatDisplayDate(m.date),
+        type:    m.type,
+        vid:     m.youtube_id,
+        agenda:  m.agenda_url,
+        minutes: m.minutes_url
+      };
+    }
+
+    function populateYearSelect() {
+      var yearSet = {};
+      meetings.forEach(function(m) { yearSet[m.year] = true; });
+
+      var years = Object.keys(yearSet).map(function(y) { return parseInt(y, 10); });
+      years.sort(function(a, b) { return b - a; });  // Newest first
+
+      var sel = document.getElementById('year-select');
+      sel.innerHTML = years.map(function(y) {
+        return '<option value="' + y + '">' + y + '</option>';
+      }).join('');
+    }
+
+    function loadMeetings() {
+      var list = document.getElementById('meeting-list');
+      list.innerHTML = '<div class="no-results">Loading meetings\u2026</div>';
+
+      fetch(DATA_URL, { cache: 'no-cache' })
+        .then(function(res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(function(data) {
+          meetings = (data.meetings || []).map(normalizeMeeting);
+
+          if (meetings.length === 0) {
+            list.innerHTML = '<div class="no-results">No meetings are available yet.</div>';
+            document.getElementById('filter-count').textContent = '0 meetings';
+            return;
+          }
+
+          populateYearSelect();
+          document.getElementById('month-select').value = 'all';
+          renderMeetings();
+        })
+        .catch(function(err) {
+          console.error('Failed to load meetings:', err);
+          list.innerHTML = '<div class="no-results">Unable to load meetings. Please refresh or try again later.</div>';
+          document.getElementById('filter-count').textContent = '';
+        });
     }
 
     function onYearChange() {
@@ -993,8 +1061,7 @@
       }).join('');
     }
 
-    document.getElementById('month-select').value = 'all';
-    renderMeetings();
+    loadMeetings();
   </script>
 
 </body>
