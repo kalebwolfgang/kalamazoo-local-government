@@ -1,0 +1,96 @@
+{
+  "board": {
+    "name": "Kalamazoo City Commission",
+    "slug": "kalamazoo-city"
+  },
+  "meta": {
+    "last_updated": "2026-04-18",
+    "source": "Manual entry (pre-scraper)"
+  },
+  "meetings": [
+    {
+      "date": "2026-03-16",
+      "type": "Regular Business Meeting",
+      "youtube_id": "2KxazWgFRsI",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4856",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2556/files/agenda/4876"
+    },
+    {
+      "date": "2026-03-16",
+      "type": "Committee of the Whole",
+      "youtube_id": "0ddn1llgC9k",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4839",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2569/files/agenda/4877"
+    },
+    {
+      "date": "2026-03-14",
+      "type": "Annual Retreat",
+      "youtube_id": "IkkKEVJrGj4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2580/files/agenda/4835",
+      "minutes_url": null
+    },
+    {
+      "date": "2026-03-02",
+      "type": "Regular Business Meeting",
+      "youtube_id": "pp5pCqjcJLE",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4806",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2532/files/agenda/4823"
+    },
+    {
+      "date": "2026-03-02",
+      "type": "Committee of the Whole",
+      "youtube_id": "_HzfrsdW5C0",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4819",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2544/files/agenda/4825"
+    },
+    {
+      "date": "2026-02-16",
+      "type": "Regular Business Meeting",
+      "youtube_id": "rw9AiPNa12A",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4751",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2555/files/agenda/4771"
+    },
+    {
+      "date": "2026-02-16",
+      "type": "Committee of the Whole",
+      "youtube_id": "F6OL4Dl1CvU",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4753",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2568/files/agenda/4772"
+    },
+    {
+      "date": "2026-02-02",
+      "type": "Regular Business Meeting",
+      "youtube_id": "8XYsqV-bIlc",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4684",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2531/files/agenda/4692"
+    },
+    {
+      "date": "2026-02-02",
+      "type": "Committee of the Whole",
+      "youtube_id": "tq1MxNj6osA",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4682",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2543/files/agenda/4722"
+    },
+    {
+      "date": "2026-01-26",
+      "type": "City Commission Meeting",
+      "youtube_id": "eSdMoRZE6y4",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4669",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2567/files/agenda/4689"
+    },
+    {
+      "date": "2026-01-05",
+      "type": "Regular Business Meeting",
+      "youtube_id": "upL1eEYIMCE",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4618",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2530/files/agenda/4727"
+    },
+    {
+      "date": "2026-01-05",
+      "type": "Committee of the Whole",
+      "youtube_id": "SwI5GDHpHNk",
+      "agenda_url": "https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4605",
+      "minutes_url": "https://kalamazoomi.portal.civicclerk.com/event/2542/files/agenda/4620"
+    }
+  ]
+}
